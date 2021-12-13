@@ -68,8 +68,8 @@ namespace PetShopWinform.DAO
         /// <summary>
         /// Dùng để tìm ra hóa đơn cần thiết
         /// </summary>
-        /// <param name="tuKhoa">Để tìm kiếm</param>
-        /// <returns>Danh sách đã tìm</returns>
+        /// <param name="tuKhoa">Để tìm kiếm kiểu String</param>
+        /// <returns>Danh sách đã tìm được</returns>
         public dynamic timKiemDanhSach(String tuKhoa)
         {
             var c = Convert.ToChar(tuKhoa.ElementAt(1));
