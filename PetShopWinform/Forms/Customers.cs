@@ -20,7 +20,6 @@ namespace PetShopWinform.Forms
             InitializeComponent();
         }
 
-<<<<<<< HEAD
         private void Customers_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -125,7 +124,7 @@ namespace PetShopWinform.Forms
             }
             if (CheckInput())
             {
-                if (xacNhan("Bạn có muốn Chỉnh sửa khách hàng có Id: "+txtId.Text) == false)
+                if (xacNhan("Bạn có muốn Chỉnh sửa khách hàng có Id: " + txtId.Text) == false)
                 {
                     return;
                 }
@@ -209,11 +208,5 @@ namespace PetShopWinform.Forms
         {
             LoadData();
         }
-=======
-        private void btnAdd_Click(object sender, EventArgs e)
-        {
-
-        }
->>>>>>> origin/login
     }
 }
