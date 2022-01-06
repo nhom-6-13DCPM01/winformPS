@@ -85,7 +85,6 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="BUS\Const.cs" />
     <Compile Include="BUS\Statistical_BUS.cs" />
     <Compile Include="DAO\Statistical_DAO.cs" />
     <Compile Include="Forms\Bill.cs">
@@ -234,9 +233,6 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>PetShopModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
-    <None Include="..\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
     <None Include="Model\PetShopModel.edmx.diagram">
       <DependentUpon>PetShopModel.edmx</DependentUpon>
     </None>
