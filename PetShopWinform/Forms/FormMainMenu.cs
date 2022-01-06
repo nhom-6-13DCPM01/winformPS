@@ -38,6 +38,7 @@ namespace PetShopWinform
                 btnAdmin.Enabled = false;
                 btnProducts.Enabled = false;
                 btnDashboard.Enabled = false;
+                
             }
         }
         private Color SelectThemeColor()

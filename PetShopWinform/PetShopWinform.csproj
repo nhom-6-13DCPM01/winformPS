@@ -85,6 +85,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BUS\Const.cs" />
     <Compile Include="BUS\Statistical_BUS.cs" />
     <Compile Include="DAO\Statistical_DAO.cs" />
     <Compile Include="Forms\Bill.cs">
