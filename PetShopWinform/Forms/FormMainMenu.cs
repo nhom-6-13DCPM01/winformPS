@@ -1,4 +1,6 @@
-﻿using PetShopWinform.Forms;
+﻿using PetShopWinform.BUS;
+using PetShopWinform.Forms;
+using PetShopWinform.Model;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -13,19 +15,31 @@ namespace PetShopWinform
 {
     public partial class FormMainMenu : Form
     {
+      
+       
         //Fields
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
-
+        private PetshopWinformEntities DBPetShop = new PetshopWinformEntities();
         public FormMainMenu()
         {
             InitializeComponent();
             random = new Random();
-            btnCloseChildForm.Visible = false;  
+            btnCloseChildForm.Visible = false;
+            PhanQuyen();
         }
 
+        void PhanQuyen()
+        {
+            if (Const.Role == false)
+            {
+                btnAdmin.Enabled = false;
+                btnProducts.Enabled = false;
+                btnDashboard.Enabled = false;
+            }
+        }
         private Color SelectThemeColor()
         {
             int index = random.Next(ThemeColor.ColorList.Count);
@@ -85,7 +99,7 @@ namespace PetShopWinform
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-
+        
         private void btnProducts_Click(object sender, EventArgs e)
         {
            

@@ -19,6 +19,13 @@ namespace PetShopWinform.Model
         {
             this.Oders = new HashSet<Oder>();
         }
+
+        public Account(string username, string passwork, int role)
+        {
+            this.UserName = username;
+            this.PassWord = passwork;
+            this.Role = role;
+        }
     
         public int Id { get; set; }
         public string UserName { get; set; }

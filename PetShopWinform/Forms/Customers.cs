@@ -20,6 +20,7 @@ namespace PetShopWinform.Forms
             InitializeComponent();
         }
 
+<<<<<<< HEAD
         private void Customers_Load(object sender, EventArgs e)
         {
             LoadData();
@@ -208,5 +209,11 @@ namespace PetShopWinform.Forms
         {
             LoadData();
         }
+=======
+        private void btnAdd_Click(object sender, EventArgs e)
+        {
+
+        }
+>>>>>>> origin/login
     }
 }

@@ -7,11 +7,15 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using PetShopWinform.BUS;
+using PetShopWinform.DAO;
+using PetShopWinform.Model;
 
 namespace PetShopWinform
 {
     public partial class FormLogin : Form
     {
+        private PetshopWinformEntities DBPetShop = new PetshopWinformEntities();
         public FormLogin()
         {
             InitializeComponent();
@@ -27,18 +31,45 @@ namespace PetShopWinform
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (txtUsername.Text == "demo" && txtPassword.Text == "123")
+            string username = txtUsername.Text;
+            string password = txtPassword.Text;
+            Login(username, password);
+                
+        }
+        private void Login(String username, string password)
+        {
+            /*var accCount = DBPetShop.Accounts.Where(a => a.UserName == username && a.PassWord == password).Count();
+            if (accCount > 0)
             {
+                FormMainMenu f = new FormMainMenu();
                 this.Hide();
-                new FormMainMenu().ShowDialog();
+                f.ShowDialog();
                 this.Show();
             }
             else
             {
-                MessageBox.Show("The User name or Password you is incrorrect, try again ");
-                txtUsername.Clear();
-                txtPassword.Clear();
-                txtUsername.Focus();
+                MessageBox.Show("The User name or Password you is incrorrect, try again");
+            }*/
+
+            var acc = DBPetShop.Accounts.Where(a => a.UserName.Equals(username)).ToList();
+            if (acc.Count() > 0)
+            {
+                if (acc[0].PassWord.Equals(password))
+                {
+                    Const.Role = Convert.ToBoolean(acc[0].Role);
+                    FormMainMenu f = new FormMainMenu();
+                    this.Hide();
+                    f.ShowDialog();
+                    this.Show();
+                }
+                else
+                {
+                    MessageBox.Show("The User name or Password you is incrorrect, try again");
+                }
+            }
+            else
+            {
+                MessageBox.Show("The User name or Password you is incrorrect, try again");
             }
         }
     }
