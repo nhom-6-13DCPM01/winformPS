@@ -40,6 +40,8 @@ namespace PetShopWinform.Forms
             this.labelTenKhachHang = new System.Windows.Forms.Label();
             this.labelMaKhachHang = new System.Windows.Forms.Label();
             this.groupBoxBill = new System.Windows.Forms.GroupBox();
+            this.labelTongTien = new System.Windows.Forms.Label();
+            this.textBoxTongTien = new System.Windows.Forms.TextBox();
             this.dataGridViewDanhMucSanPham = new System.Windows.Forms.DataGridView();
             this.textBoxMaHoaDon = new System.Windows.Forms.TextBox();
             this.dateTimePickerNgayTao = new System.Windows.Forms.DateTimePicker();
@@ -47,8 +49,6 @@ namespace PetShopWinform.Forms
             this.labelNgayTao = new System.Windows.Forms.Label();
             this.labelMaHoaDon = new System.Windows.Forms.Label();
             this.buttonCancel = new System.Windows.Forms.Button();
-            this.textBoxTongTien = new System.Windows.Forms.TextBox();
-            this.labelTongTien = new System.Windows.Forms.Label();
             this.groupBoxCustomer.SuspendLayout();
             this.groupBoxBill.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridViewDanhMucSanPham)).BeginInit();
@@ -182,6 +182,22 @@ namespace PetShopWinform.Forms
             this.groupBoxBill.TabStop = false;
             this.groupBoxBill.Text = "Thông tin hóa đơn";
             // 
+            // labelTongTien
+            // 
+            this.labelTongTien.AutoSize = true;
+            this.labelTongTien.Location = new System.Drawing.Point(261, 333);
+            this.labelTongTien.Name = "labelTongTien";
+            this.labelTongTien.Size = new System.Drawing.Size(64, 15);
+            this.labelTongTien.TabIndex = 16;
+            this.labelTongTien.Text = "Tổng tiền: ";
+            // 
+            // textBoxTongTien
+            // 
+            this.textBoxTongTien.Location = new System.Drawing.Point(336, 330);
+            this.textBoxTongTien.Name = "textBoxTongTien";
+            this.textBoxTongTien.Size = new System.Drawing.Size(123, 20);
+            this.textBoxTongTien.TabIndex = 15;
+            // 
             // dataGridViewDanhMucSanPham
             // 
             this.dataGridViewDanhMucSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -252,22 +268,6 @@ namespace PetShopWinform.Forms
             this.buttonCancel.UseVisualStyleBackColor = true;
             this.buttonCancel.Click += new System.EventHandler(this.buttonCancel_Click);
             // 
-            // textBoxTongTien
-            // 
-            this.textBoxTongTien.Location = new System.Drawing.Point(336, 330);
-            this.textBoxTongTien.Name = "textBoxTongTien";
-            this.textBoxTongTien.Size = new System.Drawing.Size(123, 20);
-            this.textBoxTongTien.TabIndex = 15;
-            // 
-            // labelTongTien
-            // 
-            this.labelTongTien.AutoSize = true;
-            this.labelTongTien.Location = new System.Drawing.Point(261, 333);
-            this.labelTongTien.Name = "labelTongTien";
-            this.labelTongTien.Size = new System.Drawing.Size(64, 15);
-            this.labelTongTien.TabIndex = 16;
-            this.labelTongTien.Text = "Tổng tiền: ";
-            // 
             // Statistcal_Info
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -278,6 +278,7 @@ namespace PetShopWinform.Forms
             this.Controls.Add(this.groupBoxCustomer);
             this.MinimumSize = new System.Drawing.Size(550, 625);
             this.Name = "Statistcal_Info";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Statistcal_Info";
             this.Load += new System.EventHandler(this.Statistcal_Info_Load);
             this.groupBoxCustomer.ResumeLayout(false);

@@ -31,6 +31,7 @@ namespace PetShopWinform
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormMainMenu));
             this.panelMenu = new System.Windows.Forms.Panel();
+            this.buttonCategory = new System.Windows.Forms.Button();
             this.btnCustomers = new System.Windows.Forms.Button();
             this.btnDashboard = new System.Windows.Forms.Button();
             this.btnBilling = new System.Windows.Forms.Button();
@@ -42,10 +43,12 @@ namespace PetShopWinform
             this.btnCloseChildForm = new System.Windows.Forms.Button();
             this.lblTitle = new System.Windows.Forms.Label();
             this.panelDesktopPane = new System.Windows.Forms.Panel();
-            this.buttonCategory = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panelLogo.SuspendLayout();
             this.panelTitleBar.SuspendLayout();
+            this.panelDesktopPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -61,8 +64,27 @@ namespace PetShopWinform
             this.panelMenu.Dock = System.Windows.Forms.DockStyle.Left;
             this.panelMenu.Location = new System.Drawing.Point(0, 0);
             this.panelMenu.Name = "panelMenu";
-            this.panelMenu.Size = new System.Drawing.Size(248, 584);
+            this.panelMenu.Size = new System.Drawing.Size(248, 721);
             this.panelMenu.TabIndex = 0;
+            // 
+            // buttonCategory
+            // 
+            this.buttonCategory.Dock = System.Windows.Forms.DockStyle.Top;
+            this.buttonCategory.FlatAppearance.BorderSize = 0;
+            this.buttonCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.buttonCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.buttonCategory.ForeColor = System.Drawing.Color.Gainsboro;
+            this.buttonCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCategory.Location = new System.Drawing.Point(0, 380);
+            this.buttonCategory.Name = "buttonCategory";
+            this.buttonCategory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
+            this.buttonCategory.Size = new System.Drawing.Size(248, 60);
+            this.buttonCategory.TabIndex = 7;
+            this.buttonCategory.Text = "Category";
+            this.buttonCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.buttonCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.buttonCategory.UseVisualStyleBackColor = true;
+            this.buttonCategory.Click += new System.EventHandler(this.buttonCategory_Click);
             // 
             // btnCustomers
             // 
@@ -193,7 +215,7 @@ namespace PetShopWinform
             this.panelTitleBar.Dock = System.Windows.Forms.DockStyle.Top;
             this.panelTitleBar.Location = new System.Drawing.Point(248, 0);
             this.panelTitleBar.Name = "panelTitleBar";
-            this.panelTitleBar.Size = new System.Drawing.Size(924, 80);
+            this.panelTitleBar.Size = new System.Drawing.Size(1126, 80);
             this.panelTitleBar.TabIndex = 1;
             // 
             // btnCloseChildForm
@@ -214,7 +236,7 @@ namespace PetShopWinform
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(409, 27);
+            this.lblTitle.Location = new System.Drawing.Point(510, 27);
             this.lblTitle.Name = "lblTitle";
             this.lblTitle.Size = new System.Drawing.Size(78, 26);
             this.lblTitle.TabIndex = 0;
@@ -222,36 +244,31 @@ namespace PetShopWinform
             // 
             // panelDesktopPane
             // 
+            this.panelDesktopPane.Controls.Add(this.pictureBox1);
             this.panelDesktopPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelDesktopPane.Location = new System.Drawing.Point(248, 80);
             this.panelDesktopPane.Name = "panelDesktopPane";
-            this.panelDesktopPane.Size = new System.Drawing.Size(924, 504);
+            this.panelDesktopPane.Size = new System.Drawing.Size(1126, 641);
             this.panelDesktopPane.TabIndex = 2;
             // 
-            // buttonCategory
+            // pictureBox1
             // 
-            this.buttonCategory.Dock = System.Windows.Forms.DockStyle.Top;
-            this.buttonCategory.FlatAppearance.BorderSize = 0;
-            this.buttonCategory.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.buttonCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.buttonCategory.ForeColor = System.Drawing.Color.Gainsboro;
-            this.buttonCategory.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCategory.Location = new System.Drawing.Point(0, 380);
-            this.buttonCategory.Name = "buttonCategory";
-            this.buttonCategory.Padding = new System.Windows.Forms.Padding(12, 0, 0, 0);
-            this.buttonCategory.Size = new System.Drawing.Size(248, 60);
-            this.buttonCategory.TabIndex = 7;
-            this.buttonCategory.Text = "Category";
-            this.buttonCategory.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.buttonCategory.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.buttonCategory.UseVisualStyleBackColor = true;
-            this.buttonCategory.Click += new System.EventHandler(this.buttonCategory_Click);
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(3, 0);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(1117, 638);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 0;
+            this.pictureBox1.TabStop = false;
             // 
             // FormMainMenu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1172, 584);
+            this.ClientSize = new System.Drawing.Size(1374, 721);
             this.Controls.Add(this.panelDesktopPane);
             this.Controls.Add(this.panelTitleBar);
             this.Controls.Add(this.panelMenu);
@@ -264,6 +281,8 @@ namespace PetShopWinform
             this.panelLogo.PerformLayout();
             this.panelTitleBar.ResumeLayout(false);
             this.panelTitleBar.PerformLayout();
+            this.panelDesktopPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -283,5 +302,6 @@ namespace PetShopWinform
         private System.Windows.Forms.Button btnCloseChildForm;
         private System.Windows.Forms.Button btnCustomers;
         private System.Windows.Forms.Button buttonCategory;
+        private System.Windows.Forms.PictureBox pictureBox1;
     }
 }

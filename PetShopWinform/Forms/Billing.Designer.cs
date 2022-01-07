@@ -30,9 +30,9 @@ namespace PetShopWinform.Forms
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Billing));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtSearch = new System.Windows.Forms.TextBox();
             this.btnPrintBill = new System.Windows.Forms.Button();
@@ -71,7 +71,6 @@ namespace PetShopWinform.Forms
             this.panel6 = new System.Windows.Forms.Panel();
             this.cbCate = new System.Windows.Forms.ComboBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.panel8 = new System.Windows.Forms.Panel();
             this.tabProduct = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.panel7 = new System.Windows.Forms.Panel();
@@ -92,7 +91,6 @@ namespace PetShopWinform.Forms
             this.panel4.SuspendLayout();
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
-            this.panel8.SuspendLayout();
             this.tabProduct.SuspendLayout();
             this.panel7.SuspendLayout();
             this.SuspendLayout();
@@ -128,7 +126,7 @@ namespace PetShopWinform.Forms
             this.btnPrintBill.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnPrintBill.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnPrintBill.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPrintBill.Location = new System.Drawing.Point(19, 489);
+            this.btnPrintBill.Location = new System.Drawing.Point(19, 564);
             this.btnPrintBill.Margin = new System.Windows.Forms.Padding(2);
             this.btnPrintBill.Name = "btnPrintBill";
             this.btnPrintBill.Size = new System.Drawing.Size(344, 41);
@@ -142,7 +140,7 @@ namespace PetShopWinform.Forms
             this.btnClearAll.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnClearAll.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnClearAll.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnClearAll.Location = new System.Drawing.Point(19, 444);
+            this.btnClearAll.Location = new System.Drawing.Point(19, 519);
             this.btnClearAll.Margin = new System.Windows.Forms.Padding(2);
             this.btnClearAll.Name = "btnClearAll";
             this.btnClearAll.Size = new System.Drawing.Size(106, 41);
@@ -166,7 +164,7 @@ namespace PetShopWinform.Forms
             this.btnSa.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSa.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnSa.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnSa.Location = new System.Drawing.Point(257, 444);
+            this.btnSa.Location = new System.Drawing.Point(257, 519);
             this.btnSa.Margin = new System.Windows.Forms.Padding(2);
             this.btnSa.Name = "btnSa";
             this.btnSa.Size = new System.Drawing.Size(106, 41);
@@ -193,7 +191,7 @@ namespace PetShopWinform.Forms
             this.btnD.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.btnD.BackColor = System.Drawing.Color.Transparent;
             this.btnD.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnD.Location = new System.Drawing.Point(138, 444);
+            this.btnD.Location = new System.Drawing.Point(138, 519);
             this.btnD.Margin = new System.Windows.Forms.Padding(2);
             this.btnD.Name = "btnD";
             this.btnD.Size = new System.Drawing.Size(106, 41);
@@ -278,38 +276,38 @@ namespace PetShopWinform.Forms
             this.dgvCurrentOrder.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCurrentOrder.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCurrentOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle4.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle4.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle4.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle4.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle4.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle4.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCurrentOrder.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle4;
             this.dgvCurrentOrder.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.SystemColors.ControlText;
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.dgvCurrentOrder.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle5.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle5.ForeColor = System.Drawing.SystemColors.ControlText;
+            dataGridViewCellStyle5.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle5.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle5.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.dgvCurrentOrder.DefaultCellStyle = dataGridViewCellStyle5;
             this.dgvCurrentOrder.Location = new System.Drawing.Point(19, 109);
             this.dgvCurrentOrder.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCurrentOrder.Name = "dgvCurrentOrder";
             this.dgvCurrentOrder.ReadOnly = true;
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle3.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle3.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dgvCurrentOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle6.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle6.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle6.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle6.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle6.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dgvCurrentOrder.RowHeadersDefaultCellStyle = dataGridViewCellStyle6;
             this.dgvCurrentOrder.RowHeadersWidth = 51;
             this.dgvCurrentOrder.RowTemplate.Height = 24;
-            this.dgvCurrentOrder.Size = new System.Drawing.Size(344, 244);
+            this.dgvCurrentOrder.Size = new System.Drawing.Size(344, 319);
             this.dgvCurrentOrder.TabIndex = 10;
             this.dgvCurrentOrder.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCurrentOrder_CellClick);
             this.dgvCurrentOrder.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvCurrentOrder_CellClick);
@@ -322,7 +320,7 @@ namespace PetShopWinform.Forms
             this.panel2.Controls.Add(this.lbtotal);
             this.panel2.Controls.Add(this.label24);
             this.panel2.Controls.Add(this.panel13);
-            this.panel2.Location = new System.Drawing.Point(19, 362);
+            this.panel2.Location = new System.Drawing.Point(19, 437);
             this.panel2.Margin = new System.Windows.Forms.Padding(2);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(344, 78);
@@ -331,14 +329,14 @@ namespace PetShopWinform.Forms
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.Silver;
+            this.panel1.Controls.Add(this.tabProduct);
             this.panel1.Controls.Add(this.panel3);
             this.panel1.Controls.Add(this.panel6);
-            this.panel1.Controls.Add(this.panel8);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(588, 534);
+            this.panel1.Size = new System.Drawing.Size(588, 609);
             this.panel1.TabIndex = 12;
             // 
             // panel3
@@ -438,7 +436,7 @@ namespace PetShopWinform.Forms
             this.label8.Location = new System.Drawing.Point(10, 38);
             this.label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(19, 16);
+            this.label8.Size = new System.Drawing.Size(18, 16);
             this.label8.TabIndex = 16;
             this.label8.Text = "Id";
             // 
@@ -451,7 +449,7 @@ namespace PetShopWinform.Forms
             this.label3.Location = new System.Drawing.Point(10, 66);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(48, 16);
+            this.label3.Size = new System.Drawing.Size(47, 16);
             this.label3.TabIndex = 16;
             this.label3.Text = "Name:";
             // 
@@ -464,7 +462,7 @@ namespace PetShopWinform.Forms
             this.label4.Location = new System.Drawing.Point(10, 98);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(50, 16);
+            this.label4.Size = new System.Drawing.Size(49, 16);
             this.label4.TabIndex = 16;
             this.label4.Text = "Phone:";
             // 
@@ -477,7 +475,7 @@ namespace PetShopWinform.Forms
             this.label2.Location = new System.Drawing.Point(10, 124);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(62, 16);
+            this.label2.Size = new System.Drawing.Size(61, 16);
             this.label2.TabIndex = 16;
             this.label2.Text = "Address:";
             // 
@@ -530,7 +528,7 @@ namespace PetShopWinform.Forms
             this.label5.Location = new System.Drawing.Point(10, 98);
             this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(40, 16);
+            this.label5.Size = new System.Drawing.Size(39, 16);
             this.label5.TabIndex = 20;
             this.label5.Text = "Role:";
             // 
@@ -569,7 +567,7 @@ namespace PetShopWinform.Forms
             this.label9.Location = new System.Drawing.Point(10, 66);
             this.label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(48, 16);
+            this.label9.Size = new System.Drawing.Size(47, 16);
             this.label9.TabIndex = 16;
             this.label9.Text = "Name:";
             // 
@@ -582,7 +580,7 @@ namespace PetShopWinform.Forms
             this.label11.Location = new System.Drawing.Point(10, 38);
             this.label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label11.Name = "label11";
-            this.label11.Size = new System.Drawing.Size(22, 16);
+            this.label11.Size = new System.Drawing.Size(21, 16);
             this.label11.TabIndex = 16;
             this.label11.Text = "Id:";
             // 
@@ -601,6 +599,7 @@ namespace PetShopWinform.Forms
             // cbCate
             // 
             this.cbCate.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbCate.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCate.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCate.FormattingEnabled = true;
             this.cbCate.Location = new System.Drawing.Point(11, 31);
@@ -623,26 +622,17 @@ namespace PetShopWinform.Forms
             this.label6.TabIndex = 13;
             this.label6.Text = "Category";
             // 
-            // panel8
-            // 
-            this.panel8.BackColor = System.Drawing.Color.DarkGray;
-            this.panel8.Controls.Add(this.tabProduct);
-            this.panel8.Location = new System.Drawing.Point(4, 228);
-            this.panel8.Name = "panel8";
-            this.panel8.Size = new System.Drawing.Size(579, 302);
-            this.panel8.TabIndex = 0;
-            // 
             // tabProduct
             // 
             this.tabProduct.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.tabProduct.Controls.Add(this.tabPage1);
-            this.tabProduct.Location = new System.Drawing.Point(2, 2);
+            this.tabProduct.Location = new System.Drawing.Point(8, 228);
             this.tabProduct.Margin = new System.Windows.Forms.Padding(2);
             this.tabProduct.Name = "tabProduct";
             this.tabProduct.SelectedIndex = 0;
-            this.tabProduct.Size = new System.Drawing.Size(575, 298);
+            this.tabProduct.Size = new System.Drawing.Size(575, 377);
             this.tabProduct.TabIndex = 0;
             // 
             // tabPage1
@@ -651,7 +641,7 @@ namespace PetShopWinform.Forms
             this.tabPage1.Location = new System.Drawing.Point(4, 22);
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.Padding = new System.Windows.Forms.Padding(3);
-            this.tabPage1.Size = new System.Drawing.Size(567, 272);
+            this.tabPage1.Size = new System.Drawing.Size(567, 351);
             this.tabPage1.TabIndex = 0;
             this.tabPage1.Text = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
@@ -676,9 +666,9 @@ namespace PetShopWinform.Forms
             this.panel7.Controls.Add(this.label10);
             this.panel7.Controls.Add(this.label21);
             this.panel7.Dock = System.Windows.Forms.DockStyle.Right;
-            this.panel7.Location = new System.Drawing.Point(593, 0);
+            this.panel7.Location = new System.Drawing.Point(602, 0);
             this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(384, 534);
+            this.panel7.Size = new System.Drawing.Size(384, 609);
             this.panel7.TabIndex = 13;
             // 
             // txtPrice
@@ -742,7 +732,7 @@ namespace PetShopWinform.Forms
             this.lbtal.Location = new System.Drawing.Point(294, 74);
             this.lbtal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lbtal.Name = "lbtal";
-            this.lbtal.Size = new System.Drawing.Size(44, 16);
+            this.lbtal.Size = new System.Drawing.Size(43, 16);
             this.lbtal.TabIndex = 7;
             this.lbtal.Text = "Total";
             // 
@@ -755,7 +745,7 @@ namespace PetShopWinform.Forms
             this.label12.Location = new System.Drawing.Point(209, 51);
             this.label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label12.Name = "label12";
-            this.label12.Size = new System.Drawing.Size(65, 16);
+            this.label12.Size = new System.Drawing.Size(63, 16);
             this.label12.TabIndex = 7;
             this.label12.Text = "Quantity";
             // 
@@ -768,7 +758,7 @@ namespace PetShopWinform.Forms
             this.label13.Location = new System.Drawing.Point(135, 51);
             this.label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label13.Name = "label13";
-            this.label13.Size = new System.Drawing.Size(45, 16);
+            this.label13.Size = new System.Drawing.Size(43, 16);
             this.label13.TabIndex = 7;
             this.label13.Text = "Price";
             // 
@@ -781,7 +771,7 @@ namespace PetShopWinform.Forms
             this.label10.Location = new System.Drawing.Point(19, 51);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
-            this.label10.Size = new System.Drawing.Size(62, 16);
+            this.label10.Size = new System.Drawing.Size(60, 16);
             this.label10.TabIndex = 7;
             this.label10.Text = "Product";
             // 
@@ -790,7 +780,7 @@ namespace PetShopWinform.Forms
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(977, 534);
+            this.ClientSize = new System.Drawing.Size(986, 609);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.panel7);
             this.Margin = new System.Windows.Forms.Padding(2);
@@ -810,7 +800,6 @@ namespace PetShopWinform.Forms
             this.panel5.PerformLayout();
             this.panel6.ResumeLayout(false);
             this.panel6.PerformLayout();
-            this.panel8.ResumeLayout(false);
             this.tabProduct.ResumeLayout(false);
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
@@ -863,7 +852,6 @@ namespace PetShopWinform.Forms
         private System.Windows.Forms.Button btnAcept;
         private System.Windows.Forms.Label label12;
         private System.Windows.Forms.Label label10;
-        private System.Windows.Forms.Panel panel8;
         private System.Windows.Forms.TextBox txtIdAcc;
         private System.Windows.Forms.TextBox txtPrice;
         private System.Windows.Forms.Label lbtal;

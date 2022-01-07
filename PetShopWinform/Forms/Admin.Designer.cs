@@ -54,9 +54,10 @@ namespace PetShopWinform.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(693, 22);
+            this.label4.Location = new System.Drawing.Point(520, 18);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(98, 25);
+            this.label4.Size = new System.Drawing.Size(78, 20);
             this.label4.TabIndex = 7;
             this.label4.Text = "Password";
             // 
@@ -66,9 +67,10 @@ namespace PetShopWinform.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(479, 22);
+            this.label3.Location = new System.Drawing.Point(359, 18);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(51, 25);
+            this.label3.Size = new System.Drawing.Size(42, 20);
             this.label3.TabIndex = 8;
             this.label3.Text = "Role";
             // 
@@ -78,9 +80,10 @@ namespace PetShopWinform.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(261, 18);
+            this.label2.Location = new System.Drawing.Point(196, 15);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(133, 25);
+            this.label2.Size = new System.Drawing.Size(106, 20);
             this.label2.TabIndex = 9;
             this.label2.Text = "Display Name";
             // 
@@ -90,9 +93,10 @@ namespace PetShopWinform.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label1.Location = new System.Drawing.Point(50, 18);
+            this.label1.Location = new System.Drawing.Point(38, 15);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(110, 25);
+            this.label1.Size = new System.Drawing.Size(89, 20);
             this.label1.TabIndex = 10;
             this.label1.Text = "User Name";
             // 
@@ -101,45 +105,50 @@ namespace PetShopWinform.Forms
             this.cbRole.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.cbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRole.FormattingEnabled = true;
-            this.cbRole.Location = new System.Drawing.Point(484, 50);
+            this.cbRole.Location = new System.Drawing.Point(363, 41);
+            this.cbRole.Margin = new System.Windows.Forms.Padding(2);
             this.cbRole.Name = "cbRole";
-            this.cbRole.Size = new System.Drawing.Size(178, 39);
+            this.cbRole.Size = new System.Drawing.Size(134, 34);
             this.cbRole.TabIndex = 6;
             // 
             // txtPassword
             // 
             this.txtPassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtPassword.Location = new System.Drawing.Point(698, 50);
+            this.txtPassword.Location = new System.Drawing.Point(524, 41);
+            this.txtPassword.Margin = new System.Windows.Forms.Padding(2);
             this.txtPassword.Multiline = true;
             this.txtPassword.Name = "txtPassword";
-            this.txtPassword.Size = new System.Drawing.Size(178, 39);
+            this.txtPassword.Size = new System.Drawing.Size(134, 32);
             this.txtPassword.TabIndex = 3;
             // 
             // txtDisplayname
             // 
             this.txtDisplayname.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtDisplayname.Location = new System.Drawing.Point(266, 50);
+            this.txtDisplayname.Location = new System.Drawing.Point(200, 41);
+            this.txtDisplayname.Margin = new System.Windows.Forms.Padding(2);
             this.txtDisplayname.Multiline = true;
             this.txtDisplayname.Name = "txtDisplayname";
-            this.txtDisplayname.Size = new System.Drawing.Size(178, 39);
+            this.txtDisplayname.Size = new System.Drawing.Size(134, 32);
             this.txtDisplayname.TabIndex = 4;
             // 
             // txtUsername
             // 
             this.txtUsername.Anchor = System.Windows.Forms.AnchorStyles.Top;
-            this.txtUsername.Location = new System.Drawing.Point(55, 50);
+            this.txtUsername.Location = new System.Drawing.Point(41, 41);
+            this.txtUsername.Margin = new System.Windows.Forms.Padding(2);
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
-            this.txtUsername.Size = new System.Drawing.Size(178, 39);
+            this.txtUsername.Size = new System.Drawing.Size(134, 32);
             this.txtUsername.TabIndex = 5;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Location = new System.Drawing.Point(9, 7);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(205, 29);
+            this.label5.Size = new System.Drawing.Size(168, 24);
             this.label5.TabIndex = 11;
             this.label5.Text = "Manage Account";
             // 
@@ -154,18 +163,20 @@ namespace PetShopWinform.Forms
             this.panel1.Controls.Add(this.cbRole);
             this.panel1.Controls.Add(this.label2);
             this.panel1.Controls.Add(this.label1);
-            this.panel1.Location = new System.Drawing.Point(2, 41);
+            this.panel1.Location = new System.Drawing.Point(2, 33);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(945, 106);
+            this.panel1.Size = new System.Drawing.Size(709, 86);
             this.panel1.TabIndex = 12;
             // 
             // btnDelete
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(658, 168);
+            this.btnDelete.Location = new System.Drawing.Point(494, 136);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(149, 50);
+            this.btnDelete.Size = new System.Drawing.Size(112, 41);
             this.btnDelete.TabIndex = 13;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -175,9 +186,10 @@ namespace PetShopWinform.Forms
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(477, 168);
+            this.btnEdit.Location = new System.Drawing.Point(358, 136);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(149, 50);
+            this.btnEdit.Size = new System.Drawing.Size(112, 41);
             this.btnEdit.TabIndex = 14;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -187,9 +199,10 @@ namespace PetShopWinform.Forms
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(294, 168);
+            this.btnAdd.Location = new System.Drawing.Point(220, 136);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(149, 50);
+            this.btnAdd.Size = new System.Drawing.Size(112, 41);
             this.btnAdd.TabIndex = 15;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -199,9 +212,10 @@ namespace PetShopWinform.Forms
             // 
             this.btnResetpassword.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnResetpassword.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnResetpassword.Location = new System.Drawing.Point(119, 168);
+            this.btnResetpassword.Location = new System.Drawing.Point(89, 136);
+            this.btnResetpassword.Margin = new System.Windows.Forms.Padding(2);
             this.btnResetpassword.Name = "btnResetpassword";
-            this.btnResetpassword.Size = new System.Drawing.Size(149, 50);
+            this.btnResetpassword.Size = new System.Drawing.Size(112, 41);
             this.btnResetpassword.TabIndex = 16;
             this.btnResetpassword.Text = "Reset ";
             this.btnResetpassword.UseVisualStyleBackColor = true;
@@ -209,20 +223,25 @@ namespace PetShopWinform.Forms
             // 
             // dataGridView1
             // 
+            this.dataGridView1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(33, 241);
+            this.dataGridView1.Location = new System.Drawing.Point(25, 196);
+            this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(854, 264);
+            this.dataGridView1.Size = new System.Drawing.Size(640, 214);
             this.dataGridView1.TabIndex = 17;
             // 
             // Admin
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(948, 556);
+            this.ClientSize = new System.Drawing.Size(711, 452);
             this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.btnResetpassword);
             this.Controls.Add(this.btnDelete);
@@ -230,6 +249,7 @@ namespace PetShopWinform.Forms
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.label5);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Admin";
             this.Text = "Admin";
             this.Load += new System.EventHandler(this.Admin_Load);
