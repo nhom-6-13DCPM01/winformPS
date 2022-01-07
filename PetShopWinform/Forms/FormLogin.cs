@@ -26,7 +26,6 @@ namespace PetShopWinform
             txtUsername.Clear();
             txtPassword.Clear();
             txtUsername.Focus();
-
         }
 
         private void btnLogin_Click(object sender, EventArgs e)

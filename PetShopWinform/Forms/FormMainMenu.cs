@@ -38,7 +38,7 @@ namespace PetShopWinform
                 btnAdmin.Enabled = false;
                 btnProducts.Enabled = false;
                 btnDashboard.Enabled = false;
-                
+                buttonCategory.Enabled = false;
             }
         }
         private Color SelectThemeColor()
@@ -148,6 +148,11 @@ namespace PetShopWinform
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Customers(), sender);
+        }
+
+        private void buttonCategory_Click(object sender, EventArgs e)
+        {
+            OpenChildForm(new Forms.FormCategory(), sender);
         }
     }
 }
