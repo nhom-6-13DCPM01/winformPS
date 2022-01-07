@@ -124,7 +124,7 @@ namespace PetShopWinform.Forms
             }
             if (CheckInput())
             {
-                if (xacNhan("Bạn có muốn Chỉnh sửa khách hàng có Id: "+txtId.Text) == false)
+                if (xacNhan("Bạn có muốn Chỉnh sửa khách hàng có Id: " + txtId.Text) == false)
                 {
                     return;
                 }

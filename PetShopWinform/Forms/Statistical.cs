@@ -172,7 +172,7 @@ namespace PetShopWinform.Forms
         #region changed
         private void dateTimePickerFrom_ValueChanged(object sender, EventArgs e)
         {
-            DateTime giaTriNgay = DateTime.Today;
+            DateTime giaTriNgay = dateTimePickerFrom.Value;
             if (dateTimePickerFrom.Value > dateTimePickerTo.Value)
             {
                 MessageBox.Show("Không tìm thấy dữ liệu phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -233,6 +233,7 @@ namespace PetShopWinform.Forms
                     {
                         txtFind.Enabled = false;
                         txtFind.Enabled = true;
+                        doanhThuTongCong();
                     }
                     else
                     {
@@ -246,6 +247,7 @@ namespace PetShopWinform.Forms
                     {
                         txtFind.Enabled = false;
                         txtFind.Enabled = true;
+                        doanhThuTongCong();
                     }
                     else
                     {
