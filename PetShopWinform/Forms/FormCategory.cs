@@ -28,6 +28,12 @@ namespace PetShopWinform.Forms
             dataGridViewCategory.Columns[1].Width = (int)(dataGridViewCategory.Width * 0.5);
         }
 
+        private void clearTextBox()
+        {
+            textBoxTenKho.Clear();
+            textBoxMaKho.Clear();
+        }
+
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (!textBoxTenKho.Text.Equals(""))
@@ -84,6 +90,7 @@ namespace PetShopWinform.Forms
         {
             category_BUS.truyenDanhSachCategory(dataGridViewCategory);
             dinhDangKhung();
+            clearTextBox();
         }
 
         private void dataGridViewCategory_CellClick(object sender, DataGridViewCellEventArgs e)
