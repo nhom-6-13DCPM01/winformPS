@@ -55,7 +55,7 @@ namespace PetShopWinform.Forms
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (!textBoxTenKho.Text.Equals(""))
+            if (!textBoxTenKho.Text.Equals("") || !textBoxMaKho.Text.Equals(""))
             {
                 if (MessageBox.Show("Bạn có muốn cập nhật kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
                 {
@@ -75,15 +75,18 @@ namespace PetShopWinform.Forms
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn xóa kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            if (!textBoxMaKho.Text.Equals(""))
             {
-                Category category = new Category();
-                category.Id = Convert.ToInt32(textBoxMaKho.Text);
+                if (MessageBox.Show("Bạn có muốn xóa kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+                {
+                    Category category = new Category();
+                    category.Id = Convert.ToInt32(textBoxMaKho.Text);
 
-                if (category_BUS.deleteCategory(category))
-                    MessageBox.Show("Bạn đã xóa thành công", "Thông báo");
-                else
-                    MessageBox.Show("Bạn đã xóa thất bại", "Thông báo");
+                    if (category_BUS.deleteCategory(category))
+                        MessageBox.Show("Bạn đã xóa thành công", "Thông báo");
+                    else
+                        MessageBox.Show("Bạn đã xóa thất bại", "Thông báo");
+                }
             }
 
             FormCategory_Load(sender, e);
