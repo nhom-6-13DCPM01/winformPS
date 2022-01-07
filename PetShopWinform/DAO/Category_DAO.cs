@@ -49,6 +49,14 @@ namespace PetShopWinform.DAO
 
                 foreach(var itemOrderInfo in orderInfo)
                 {
+                    var order = DBPetShop.Oders.Where(u => u.Id == itemOrderInfo.IdOrder).ToList();
+
+                    foreach(var itemOrder in order)
+                    {
+                        DBPetShop.Oders.Remove(itemOrder);
+                        DBPetShop.SaveChanges();
+                    }
+
                     DBPetShop.OrderInfoes.Remove(itemOrderInfo);
                     DBPetShop.SaveChanges();
                 }
