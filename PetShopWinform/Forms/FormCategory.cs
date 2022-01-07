@@ -55,19 +55,22 @@ namespace PetShopWinform.Forms
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn cập nhật kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            if (!textBoxTenKho.Text.Equals(""))
             {
-                Category category = new Category();
-                category.Id = Convert.ToInt32(textBoxMaKho.Text);
-                category.Name = textBoxTenKho.Text;
+                if (MessageBox.Show("Bạn có muốn cập nhật kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+                {
+                    Category category = new Category();
+                    category.Id = Convert.ToInt32(textBoxMaKho.Text);
+                    category.Name = textBoxTenKho.Text;
 
-                if (category_BUS.editCategory(category))
-                    MessageBox.Show("Bạn đã cập nhật thành công", "Thông báo");
-                else
-                    MessageBox.Show("Bạn đã cập nhật thất bại", "Thông báo");
+                    if (category_BUS.editCategory(category))
+                        MessageBox.Show("Bạn đã cập nhật thành công", "Thông báo");
+                    else
+                        MessageBox.Show("Bạn đã cập nhật thất bại", "Thông báo");
+                }
+
+                FormCategory_Load(sender, e);
             }
-
-            FormCategory_Load(sender, e);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
