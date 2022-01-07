@@ -30,40 +30,49 @@ namespace PetShopWinform.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            Category category = new Category();
-            category.Name = textBoxTenKho.Text;
+            if (MessageBox.Show("Bạn có muốn thêm kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            {
+                Category category = new Category();
+                category.Name = textBoxTenKho.Text;
 
-            if (category_BUS.addCategory(category))
-                MessageBox.Show("Bạn đã thêm thành công", "Thông báo");
-            else
-                MessageBox.Show("Bạn đã thêm thất bại", "Thông báo");
+                if (category_BUS.addCategory(category))
+                    MessageBox.Show("Bạn đã thêm thành công", "Thông báo");
+                else
+                    MessageBox.Show("Bạn đã thêm thất bại", "Thông báo");
+            }
 
             FormCategory_Load(sender, e);
         }
 
         private void buttonEdit_Click(object sender, EventArgs e)
         {
-            Category category = new Category();
-            category.Id = Convert.ToInt32(textBoxMaKho.Text);
-            category.Name = textBoxTenKho.Text;
+            if (MessageBox.Show("Bạn có muốn cập nhật kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            {
+                Category category = new Category();
+                category.Id = Convert.ToInt32(textBoxMaKho.Text);
+                category.Name = textBoxTenKho.Text;
 
-            if (category_BUS.editCategory(category))
-                MessageBox.Show("Bạn đã cập nhật thành công", "Thông báo");
-            else
-                MessageBox.Show("Bạn đã cập nhật thất bại", "Thông báo");
+                if (category_BUS.editCategory(category))
+                    MessageBox.Show("Bạn đã cập nhật thành công", "Thông báo");
+                else
+                    MessageBox.Show("Bạn đã cập nhật thất bại", "Thông báo");
+            }
 
             FormCategory_Load(sender, e);
         }
 
         private void buttonDelete_Click(object sender, EventArgs e)
         {
-            Category category = new Category();
-            category.Id = Convert.ToInt32(textBoxMaKho.Text);
+            if (MessageBox.Show("Bạn có muốn xóa kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            {
+                Category category = new Category();
+                category.Id = Convert.ToInt32(textBoxMaKho.Text);
 
-            if (category_BUS.deleteCategory(category))
-                MessageBox.Show("Bạn đã xóa thành công", "Thông báo");
-            else
-                MessageBox.Show("Bạn đã xóa thất bại", "Thông báo");
+                if (category_BUS.deleteCategory(category))
+                    MessageBox.Show("Bạn đã xóa thành công", "Thông báo");
+                else
+                    MessageBox.Show("Bạn đã xóa thất bại", "Thông báo");
+            }
 
             FormCategory_Load(sender, e);
         }
