@@ -41,6 +41,13 @@ namespace PetShopWinform.DAO
         {
             var categoryFind = findCategory(category);
 
+            var product = DBPetShop.Products.Where(c => c.Category1.Id == categoryFind.Id).ToList();
+            foreach(var item in product)
+            {
+                DBPetShop.Products.Remove(item);
+                DBPetShop.SaveChanges();
+            }
+
             DBPetShop.Categories.Remove(categoryFind);
             DBPetShop.SaveChanges();
         }
