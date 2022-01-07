@@ -30,15 +30,18 @@ namespace PetShopWinform.Forms
 
         private void buttonAdd_Click(object sender, EventArgs e)
         {
-            if (MessageBox.Show("Bạn có muốn thêm kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+            if (!textBoxTenKho.Text.Equals(""))
             {
-                Category category = new Category();
-                category.Name = textBoxTenKho.Text;
+                if (MessageBox.Show("Bạn có muốn thêm kho này không?", "Thông báo", MessageBoxButtons.OKCancel, MessageBoxIcon.Question).Equals(DialogResult.OK))
+                {
+                    Category category = new Category();
+                    category.Name = textBoxTenKho.Text;
 
-                if (category_BUS.addCategory(category))
-                    MessageBox.Show("Bạn đã thêm thành công", "Thông báo");
-                else
-                    MessageBox.Show("Bạn đã thêm thất bại", "Thông báo");
+                    if (category_BUS.addCategory(category))
+                        MessageBox.Show("Bạn đã thêm thành công", "Thông báo");
+                    else
+                        MessageBox.Show("Bạn đã thêm thất bại", "Thông báo");
+                }
             }
 
             FormCategory_Load(sender, e);
