@@ -22,18 +22,20 @@ namespace PetShopWinform
         private Random random;
         private int tempIndex;
         private Form activeForm;
+        private Account account;
         private PetshopWinformEntities DBPetShop = new PetshopWinformEntities();
-        public FormMainMenu()
+        public FormMainMenu(Account account)
         {
             InitializeComponent();
             random = new Random();
             btnCloseChildForm.Visible = false;
+            this.account = account;
             PhanQuyen();
         }
 
         void PhanQuyen()
         {
-            if (Const.Role == false)
+            if (account.Role == 0)
             {
                 btnAdmin.Enabled = false;
                 btnProducts.Enabled = false;
@@ -118,7 +120,7 @@ namespace PetShopWinform
 
         private void btnBilling_Click(object sender, EventArgs e)
         {
-            OpenChildForm(new Forms.Billing(), sender);
+            OpenChildForm(new Forms.Billing(account), sender);
             
         }
 

@@ -50,21 +50,15 @@ namespace PetShopWinform
                 MessageBox.Show("The User name or Password you is incrorrect, try again");
             }*/
 
-            var acc = DBPetShop.Accounts.Where(a => a.UserName.Equals(username)).ToList();
-            if (acc.Count() > 0)
+            Account acc = DBPetShop.Accounts.SingleOrDefault(a => a.UserName.Equals(username) && a.PassWord == password);
+            if (acc!=null)
             {
-                if (acc[0].PassWord.Equals(password))
-                {
-                    Const.Role = Convert.ToBoolean(acc[0].Role);
-                    FormMainMenu f = new FormMainMenu();
+                
+                    FormMainMenu f = new FormMainMenu(acc);
                     this.Hide();
                     f.ShowDialog();
                     this.Show();
-                }
-                else
-                {
-                    MessageBox.Show("The User name or Password you is incrorrect, try again");
-                }
+
             }
             else
             {

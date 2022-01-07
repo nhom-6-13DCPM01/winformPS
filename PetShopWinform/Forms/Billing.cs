@@ -20,8 +20,9 @@ namespace PetShopWinform.Forms
 
         public Billing(Account account)
         {
+            InitializeComponent();
             this.account = account;
-            txtIdAcc.Text = account.Id.ToString();
+            txtIdAcc.Text = Convert.ToString(account.Id);
             txtNameAcc.Text = account.DisplayName;
             txtRole.Text = account.Role == 1 ? "Admin" : "Employee";
         }
@@ -54,6 +55,7 @@ namespace PetShopWinform.Forms
                 }
             }
             label21.ForeColor = ThemeColor.SecondaryColor;
+
         }
 
         public void LoadData()
@@ -121,7 +123,8 @@ namespace PetShopWinform.Forms
                 lbName.Text = itemPro.Name;
                 lbName.Location = new Point(2, 2);
                 lbName.BackColor = Color.FromArgb(255, 224, 192);
-                lbName.Font = new Font("Microsoft Sans Serif", 15, FontStyle.Bold);
+                lbName.Font = new Font("Microsoft Sans Serif", 10, FontStyle.Bold);
+                lbName.MaximumSize = btn.Size;
                 lbName.ForeColor = Color.Black;
                 lbName.AutoSize = true;
                 Label lbPrice = new Label();
@@ -302,6 +305,7 @@ namespace PetShopWinform.Forms
                     db.OrderInfoes.Add(orderInfo);
                     db.SaveChanges();
                 }
+                MessageBox.Show("Thanh toán hóa đơn thành công", "Thông báo", MessageBoxButtons.OK);
                 ItemOrders.Clear();
                 showData();
                 ClearData();
