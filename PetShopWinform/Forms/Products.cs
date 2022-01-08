@@ -47,7 +47,7 @@ namespace PetShopWinform.Forms
 
         private void LoadData()
         {
-            var result = from c in db.Products select new { Id = c.Id, Name = c.Name, Category = c.Category, Quantity = c.Quantity, Price = c.Price };
+            var result = from c in db.Products select new { Id = c.Id, Name = c.Name, Category = c.Category1.Name, Quantity = c.Quantity, Price = c.Price };
             dgvProductList.DataSource = result.ToList();
             cbCategory.DataSource = db.Categories.ToList();
             cbCategory.DisplayMember = "Name";
@@ -256,7 +256,7 @@ namespace PetShopWinform.Forms
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
             /*var results = db.Products.Where(p => p.Name.Contains(txtSearch.Text));*/
-            var results = (from c in db.Products where c.Name.Contains(txtSearch.Text) select new { Id = c.Id, Name = c.Name, Category = c.Category, Quantity = c.Quantity, Price = c.Price });
+            var results = (from c in db.Products where c.Name.Contains(txtSearch.Text) select new { Id = c.Id, Name = c.Name, Category = c.Category1.Name, Quantity = c.Quantity, Price = c.Price });
             dgvProductList.DataSource = results.ToList();
         }
 
