@@ -94,6 +94,10 @@ namespace PetShopWinform.Forms
                     MessageBox.Show("Submit Successfully!");
                     Clear();*/
                 }
+                else
+                {
+                    Clear();
+                }
 
             }
 
@@ -123,6 +127,10 @@ namespace PetShopWinform.Forms
                     LoadData();
 
                     MessageBox.Show("Submit Successfully!");
+                    Clear();
+                }
+                else
+                {
                     Clear();
                 }
             }
@@ -169,6 +177,10 @@ namespace PetShopWinform.Forms
                 MessageBox.Show("Submit Successfully!");
                 Clear();
 
+            }
+            else
+            {
+                Clear();
             }
         }
    
