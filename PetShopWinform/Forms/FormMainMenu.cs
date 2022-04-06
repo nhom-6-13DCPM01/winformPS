@@ -30,6 +30,7 @@ namespace PetShopWinform
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.account = account;
+            lbUser.Text = account.UserName;
             PhanQuyen();
         }
 
@@ -155,6 +156,11 @@ namespace PetShopWinform
         private void buttonCategory_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.FormCategory(), sender);
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            this.Close();
         }
     }
 }

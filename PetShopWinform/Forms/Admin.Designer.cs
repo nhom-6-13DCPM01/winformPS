@@ -103,13 +103,14 @@ namespace PetShopWinform.Forms
             // cbRole
             // 
             this.cbRole.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbRole.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbRole.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbRole.FormattingEnabled = true;
             this.cbRole.Location = new System.Drawing.Point(363, 41);
             this.cbRole.Margin = new System.Windows.Forms.Padding(2);
             this.cbRole.Name = "cbRole";
             this.cbRole.Size = new System.Drawing.Size(134, 34);
-            this.cbRole.TabIndex = 6;
+            this.cbRole.TabIndex = 2;
             // 
             // txtPassword
             // 
@@ -129,7 +130,7 @@ namespace PetShopWinform.Forms
             this.txtDisplayname.Multiline = true;
             this.txtDisplayname.Name = "txtDisplayname";
             this.txtDisplayname.Size = new System.Drawing.Size(134, 32);
-            this.txtDisplayname.TabIndex = 4;
+            this.txtDisplayname.TabIndex = 1;
             // 
             // txtUsername
             // 
@@ -139,7 +140,7 @@ namespace PetShopWinform.Forms
             this.txtUsername.Multiline = true;
             this.txtUsername.Name = "txtUsername";
             this.txtUsername.Size = new System.Drawing.Size(134, 32);
-            this.txtUsername.TabIndex = 5;
+            this.txtUsername.TabIndex = 0;
             // 
             // label5
             // 
@@ -154,6 +155,7 @@ namespace PetShopWinform.Forms
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtPassword);
             this.panel1.Controls.Add(this.txtUsername);
@@ -228,12 +230,12 @@ namespace PetShopWinform.Forms
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridView1.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(25, 196);
+            this.dataGridView1.Location = new System.Drawing.Point(11, 196);
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.RowTemplate.Height = 24;
-            this.dataGridView1.Size = new System.Drawing.Size(640, 214);
+            this.dataGridView1.Size = new System.Drawing.Size(689, 245);
             this.dataGridView1.TabIndex = 17;
             // 
             // Admin

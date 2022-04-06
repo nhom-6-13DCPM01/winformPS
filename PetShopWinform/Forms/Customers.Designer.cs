@@ -58,6 +58,7 @@ namespace PetShopWinform.Forms
             // 
             // panel1
             // 
+            this.panel1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.Controls.Add(this.txtAddress);
             this.panel1.Controls.Add(this.label5);
@@ -70,7 +71,6 @@ namespace PetShopWinform.Forms
             this.panel1.Controls.Add(this.txtName);
             this.panel1.Controls.Add(this.txtPhone);
             this.panel1.Controls.Add(this.txtId);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
@@ -85,7 +85,7 @@ namespace PetShopWinform.Forms
             this.txtAddress.Margin = new System.Windows.Forms.Padding(2);
             this.txtAddress.Name = "txtAddress";
             this.txtAddress.Size = new System.Drawing.Size(135, 32);
-            this.txtAddress.TabIndex = 5;
+            this.txtAddress.TabIndex = 1;
             this.txtAddress.Text = "";
             // 
             // label5
@@ -167,13 +167,14 @@ namespace PetShopWinform.Forms
             // cbVip
             // 
             this.cbVip.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbVip.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbVip.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbVip.FormattingEnabled = true;
             this.cbVip.Location = new System.Drawing.Point(695, 72);
             this.cbVip.Margin = new System.Windows.Forms.Padding(2);
             this.cbVip.Name = "cbVip";
             this.cbVip.Size = new System.Drawing.Size(134, 34);
-            this.cbVip.TabIndex = 1;
+            this.cbVip.TabIndex = 3;
             // 
             // txtName
             // 
@@ -195,7 +196,7 @@ namespace PetShopWinform.Forms
             this.txtPhone.Multiline = true;
             this.txtPhone.Name = "txtPhone";
             this.txtPhone.Size = new System.Drawing.Size(134, 32);
-            this.txtPhone.TabIndex = 0;
+            this.txtPhone.TabIndex = 2;
             // 
             // txtId
             // 
@@ -250,9 +251,11 @@ namespace PetShopWinform.Forms
             // 
             // dgvCustomerList
             // 
+            this.dgvCustomerList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvCustomerList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvCustomerList.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvCustomerList.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dgvCustomerList.Location = new System.Drawing.Point(0, 242);
             this.dgvCustomerList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvCustomerList.Name = "dgvCustomerList";
@@ -265,7 +268,6 @@ namespace PetShopWinform.Forms
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label6.Location = new System.Drawing.Point(9, 208);
@@ -277,7 +279,7 @@ namespace PetShopWinform.Forms
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
             this.btnSearch.Location = new System.Drawing.Point(812, 202);
             this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
@@ -290,7 +292,7 @@ namespace PetShopWinform.Forms
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtSearch.Location = new System.Drawing.Point(654, 202);
             this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
@@ -303,7 +305,6 @@ namespace PetShopWinform.Forms
             // 
             // btnReLoad
             // 
-            this.btnReLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
             this.btnReLoad.Location = new System.Drawing.Point(150, 200);
             this.btnReLoad.Margin = new System.Windows.Forms.Padding(2);

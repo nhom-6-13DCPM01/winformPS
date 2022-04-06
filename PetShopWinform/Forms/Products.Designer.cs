@@ -75,18 +75,19 @@ namespace PetShopWinform.Forms
             this.panel1.Controls.Add(this.txtId);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1119, 150);
+            this.panel1.Size = new System.Drawing.Size(839, 122);
             this.panel1.TabIndex = 0;
             // 
             // label5
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(12, 9);
+            this.label5.Location = new System.Drawing.Point(9, 7);
+            this.label5.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(116, 29);
+            this.label5.Size = new System.Drawing.Size(92, 24);
             this.label5.TabIndex = 4;
             this.label5.Text = "Products";
             // 
@@ -96,9 +97,10 @@ namespace PetShopWinform.Forms
             this.label4.AutoSize = true;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.SystemColors.ActiveCaptionText;
-            this.label4.Location = new System.Drawing.Point(899, 61);
+            this.label4.Location = new System.Drawing.Point(674, 50);
+            this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(56, 25);
+            this.label4.Size = new System.Drawing.Size(44, 20);
             this.label4.TabIndex = 2;
             this.label4.Text = "Price";
             // 
@@ -108,9 +110,10 @@ namespace PetShopWinform.Forms
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label3.ForeColor = System.Drawing.Color.Black;
-            this.label3.Location = new System.Drawing.Point(684, 61);
+            this.label3.Location = new System.Drawing.Point(513, 50);
+            this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(85, 25);
+            this.label3.Size = new System.Drawing.Size(68, 20);
             this.label3.TabIndex = 2;
             this.label3.Text = "Quantity";
             // 
@@ -120,9 +123,10 @@ namespace PetShopWinform.Forms
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.Black;
-            this.label2.Location = new System.Drawing.Point(467, 57);
+            this.label2.Location = new System.Drawing.Point(350, 46);
+            this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(92, 25);
+            this.label2.Size = new System.Drawing.Size(73, 20);
             this.label2.TabIndex = 2;
             this.label2.Text = "Category";
             // 
@@ -132,9 +136,10 @@ namespace PetShopWinform.Forms
             this.label7.AutoSize = true;
             this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label7.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label7.Location = new System.Drawing.Point(41, 57);
+            this.label7.Location = new System.Drawing.Point(31, 46);
+            this.label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(28, 25);
+            this.label7.Size = new System.Drawing.Size(23, 20);
             this.label7.TabIndex = 2;
             this.label7.Text = "Id";
             // 
@@ -144,76 +149,79 @@ namespace PetShopWinform.Forms
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.ForeColor = System.Drawing.SystemColors.ControlDarkDark;
-            this.label1.Location = new System.Drawing.Point(255, 57);
+            this.label1.Location = new System.Drawing.Point(191, 46);
+            this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(64, 25);
+            this.label1.Size = new System.Drawing.Size(51, 20);
             this.label1.TabIndex = 2;
             this.label1.Text = "Name";
             // 
             // cbCategory
             // 
             this.cbCategory.Anchor = System.Windows.Forms.AnchorStyles.Top;
+            this.cbCategory.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCategory.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.cbCategory.FormattingEnabled = true;
-            this.cbCategory.Location = new System.Drawing.Point(471, 89);
-            this.cbCategory.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.cbCategory.Location = new System.Drawing.Point(353, 72);
+            this.cbCategory.Margin = new System.Windows.Forms.Padding(2);
             this.cbCategory.Name = "cbCategory";
-            this.cbCategory.Size = new System.Drawing.Size(177, 39);
+            this.cbCategory.Size = new System.Drawing.Size(134, 34);
             this.cbCategory.TabIndex = 1;
             // 
             // txtPrice
             // 
             this.txtPrice.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtPrice.Location = new System.Drawing.Point(903, 89);
-            this.txtPrice.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtPrice.Location = new System.Drawing.Point(677, 72);
+            this.txtPrice.Margin = new System.Windows.Forms.Padding(2);
             this.txtPrice.Multiline = true;
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(177, 38);
-            this.txtPrice.TabIndex = 0;
+            this.txtPrice.Size = new System.Drawing.Size(134, 32);
+            this.txtPrice.TabIndex = 3;
             // 
             // txtName
             // 
             this.txtName.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtName.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtName.Location = new System.Drawing.Point(260, 89);
-            this.txtName.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtName.Location = new System.Drawing.Point(195, 72);
+            this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(177, 38);
+            this.txtName.Size = new System.Drawing.Size(134, 32);
             this.txtName.TabIndex = 0;
             // 
             // txtQuantity
             // 
             this.txtQuantity.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtQuantity.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtQuantity.Location = new System.Drawing.Point(689, 89);
-            this.txtQuantity.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtQuantity.Location = new System.Drawing.Point(517, 72);
+            this.txtQuantity.Margin = new System.Windows.Forms.Padding(2);
             this.txtQuantity.Multiline = true;
             this.txtQuantity.Name = "txtQuantity";
-            this.txtQuantity.Size = new System.Drawing.Size(177, 38);
-            this.txtQuantity.TabIndex = 0;
+            this.txtQuantity.Size = new System.Drawing.Size(134, 32);
+            this.txtQuantity.TabIndex = 2;
             // 
             // txtId
             // 
             this.txtId.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.txtId.Enabled = false;
-            this.txtId.Location = new System.Drawing.Point(46, 89);
-            this.txtId.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtId.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(163)));
+            this.txtId.Location = new System.Drawing.Point(34, 72);
+            this.txtId.Margin = new System.Windows.Forms.Padding(2);
             this.txtId.Multiline = true;
             this.txtId.Name = "txtId";
             this.txtId.ReadOnly = true;
-            this.txtId.Size = new System.Drawing.Size(177, 38);
+            this.txtId.Size = new System.Drawing.Size(134, 32);
             this.txtId.TabIndex = 0;
             // 
             // btnAdd
             // 
             this.btnAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAdd.Location = new System.Drawing.Point(275, 154);
-            this.btnAdd.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnAdd.Location = new System.Drawing.Point(206, 125);
+            this.btnAdd.Margin = new System.Windows.Forms.Padding(2);
             this.btnAdd.Name = "btnAdd";
-            this.btnAdd.Size = new System.Drawing.Size(149, 50);
+            this.btnAdd.Size = new System.Drawing.Size(112, 41);
             this.btnAdd.TabIndex = 3;
             this.btnAdd.Text = "Add";
             this.btnAdd.UseVisualStyleBackColor = true;
@@ -223,10 +231,10 @@ namespace PetShopWinform.Forms
             // 
             this.btnEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnEdit.Location = new System.Drawing.Point(458, 154);
-            this.btnEdit.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnEdit.Location = new System.Drawing.Point(344, 125);
+            this.btnEdit.Margin = new System.Windows.Forms.Padding(2);
             this.btnEdit.Name = "btnEdit";
-            this.btnEdit.Size = new System.Drawing.Size(149, 50);
+            this.btnEdit.Size = new System.Drawing.Size(112, 41);
             this.btnEdit.TabIndex = 3;
             this.btnEdit.Text = "Edit";
             this.btnEdit.UseVisualStyleBackColor = true;
@@ -236,10 +244,10 @@ namespace PetShopWinform.Forms
             // 
             this.btnDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnDelete.Location = new System.Drawing.Point(639, 154);
-            this.btnDelete.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnDelete.Location = new System.Drawing.Point(479, 125);
+            this.btnDelete.Margin = new System.Windows.Forms.Padding(2);
             this.btnDelete.Name = "btnDelete";
-            this.btnDelete.Size = new System.Drawing.Size(149, 50);
+            this.btnDelete.Size = new System.Drawing.Size(112, 41);
             this.btnDelete.TabIndex = 3;
             this.btnDelete.Text = "Delete";
             this.btnDelete.UseVisualStyleBackColor = true;
@@ -247,6 +255,9 @@ namespace PetShopWinform.Forms
             // 
             // dgvProductList
             // 
+            this.dgvProductList.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dgvProductList.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dgvProductList.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
@@ -266,9 +277,8 @@ namespace PetShopWinform.Forms
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
             this.dgvProductList.DefaultCellStyle = dataGridViewCellStyle2;
-            this.dgvProductList.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.dgvProductList.Location = new System.Drawing.Point(0, 273);
-            this.dgvProductList.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.dgvProductList.Location = new System.Drawing.Point(0, 222);
+            this.dgvProductList.Margin = new System.Windows.Forms.Padding(2);
             this.dgvProductList.Name = "dgvProductList";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
@@ -280,53 +290,56 @@ namespace PetShopWinform.Forms
             this.dgvProductList.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
             this.dgvProductList.RowHeadersWidth = 70;
             this.dgvProductList.RowTemplate.Height = 24;
-            this.dgvProductList.Size = new System.Drawing.Size(1119, 310);
+            this.dgvProductList.Size = new System.Drawing.Size(839, 252);
             this.dgvProductList.TabIndex = 1;
             this.dgvProductList.DoubleClick += new System.EventHandler(this.dgvProductList_DoubleClick);
             // 
             // label6
             // 
-            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
             this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 13.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(12, 233);
+            this.label6.Location = new System.Drawing.Point(9, 189);
+            this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(151, 29);
+            this.label6.Size = new System.Drawing.Size(119, 24);
             this.label6.TabIndex = 4;
             this.label6.Text = "Product List";
             // 
             // txtSearch
             // 
-            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtSearch.Font = new System.Drawing.Font("Microsoft Sans Serif", 16.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtSearch.Location = new System.Drawing.Point(841, 219);
-            this.txtSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.txtSearch.Location = new System.Drawing.Point(631, 178);
+            this.txtSearch.Margin = new System.Windows.Forms.Padding(2);
             this.txtSearch.Multiline = true;
             this.txtSearch.Name = "txtSearch";
             this.txtSearch.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.txtSearch.Size = new System.Drawing.Size(204, 43);
+            this.txtSearch.Size = new System.Drawing.Size(154, 36);
             this.txtSearch.TabIndex = 0;
             this.txtSearch.TextAlign = System.Windows.Forms.HorizontalAlignment.Right;
             this.txtSearch.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtSearch_KeyPress);
             // 
             // btnSearch
             // 
-            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnSearch.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.btnSearch.Image = ((System.Drawing.Image)(resources.GetObject("btnSearch.Image")));
-            this.btnSearch.Location = new System.Drawing.Point(1051, 225);
-            this.btnSearch.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.btnSearch.Location = new System.Drawing.Point(788, 183);
+            this.btnSearch.Margin = new System.Windows.Forms.Padding(2);
             this.btnSearch.Name = "btnSearch";
-            this.btnSearch.Size = new System.Drawing.Size(37, 30);
+            this.btnSearch.Size = new System.Drawing.Size(28, 24);
             this.btnSearch.TabIndex = 5;
             this.btnSearch.TabStop = false;
             // 
             // btnReLoad
             // 
-            this.btnReLoad.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.btnReLoad.Image = ((System.Drawing.Image)(resources.GetObject("btnReLoad.Image")));
-            this.btnReLoad.Location = new System.Drawing.Point(169, 237);
+            this.btnReLoad.Location = new System.Drawing.Point(127, 193);
+            this.btnReLoad.Margin = new System.Windows.Forms.Padding(2);
             this.btnReLoad.Name = "btnReLoad";
-            this.btnReLoad.Size = new System.Drawing.Size(25, 25);
+            this.btnReLoad.Size = new System.Drawing.Size(19, 20);
             this.btnReLoad.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.btnReLoad.TabIndex = 6;
             this.btnReLoad.TabStop = false;
@@ -334,10 +347,10 @@ namespace PetShopWinform.Forms
             // 
             // Products
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(1119, 583);
+            this.ClientSize = new System.Drawing.Size(839, 474);
             this.Controls.Add(this.btnReLoad);
             this.Controls.Add(this.btnSearch);
             this.Controls.Add(this.label6);
@@ -347,7 +360,7 @@ namespace PetShopWinform.Forms
             this.Controls.Add(this.btnAdd);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.txtSearch);
-            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Products";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterParent;
             this.Text = "Products";

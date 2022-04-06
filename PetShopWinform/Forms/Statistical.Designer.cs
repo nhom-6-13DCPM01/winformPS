@@ -47,6 +47,7 @@ namespace PetShopWinform.Forms
             // 
             // dateTimePickerTo
             // 
+            this.dateTimePickerTo.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePickerTo.CalendarForeColor = System.Drawing.Color.Brown;
             this.dateTimePickerTo.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerTo.CustomFormat = "dd/MM/yyyy";
@@ -62,6 +63,7 @@ namespace PetShopWinform.Forms
             // 
             // dateTimePickerFrom
             // 
+            this.dateTimePickerFrom.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.dateTimePickerFrom.CalendarTitleBackColor = System.Drawing.Color.OrangeRed;
             this.dateTimePickerFrom.CustomFormat = "dd/MM/yyyy";
             this.dateTimePickerFrom.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -76,6 +78,7 @@ namespace PetShopWinform.Forms
             // 
             // label1
             // 
+            this.label1.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label1.Location = new System.Drawing.Point(14, 45);
@@ -87,6 +90,7 @@ namespace PetShopWinform.Forms
             // 
             // label2
             // 
+            this.label2.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.Location = new System.Drawing.Point(175, 45);
@@ -98,7 +102,7 @@ namespace PetShopWinform.Forms
             // 
             // btnReset
             // 
-            this.btnReset.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnReset.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnReset.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnReset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnReset.Location = new System.Drawing.Point(380, 35);
@@ -112,7 +116,7 @@ namespace PetShopWinform.Forms
             // 
             // btnExcel
             // 
-            this.btnExcel.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnExcel.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.btnExcel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.btnExcel.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnExcel.Location = new System.Drawing.Point(508, 35);
@@ -126,9 +130,11 @@ namespace PetShopWinform.Forms
             // 
             // dataGridViewBangHienThi
             // 
+            this.dataGridViewBangHienThi.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewBangHienThi.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewBangHienThi.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewBangHienThi.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.dataGridViewBangHienThi.Location = new System.Drawing.Point(0, 155);
             this.dataGridViewBangHienThi.Margin = new System.Windows.Forms.Padding(2);
             this.dataGridViewBangHienThi.Name = "dataGridViewBangHienThi";
@@ -141,7 +147,7 @@ namespace PetShopWinform.Forms
             // 
             // pictureBox1
             // 
-            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.pictureBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
             this.pictureBox1.Location = new System.Drawing.Point(591, 94);
             this.pictureBox1.Margin = new System.Windows.Forms.Padding(2);
@@ -153,7 +159,7 @@ namespace PetShopWinform.Forms
             // 
             // txtFind
             // 
-            this.txtFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtFind.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
             this.txtFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtFind.ForeColor = System.Drawing.SystemColors.ControlDark;
             this.txtFind.Location = new System.Drawing.Point(308, 94);
@@ -170,16 +176,16 @@ namespace PetShopWinform.Forms
             // 
             // textBoxTongCong
             // 
-            this.textBoxTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxTongCong.Enabled = false;
             this.textBoxTongCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTongCong.Location = new System.Drawing.Point(110, 94);
             this.textBoxTongCong.Name = "textBoxTongCong";
+            this.textBoxTongCong.ReadOnly = true;
             this.textBoxTongCong.Size = new System.Drawing.Size(127, 26);
             this.textBoxTongCong.TabIndex = 18;
             // 
             // labelTongCong
             // 
-            this.labelTongCong.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.labelTongCong.AutoSize = true;
             this.labelTongCong.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTongCong.Location = new System.Drawing.Point(31, 97);

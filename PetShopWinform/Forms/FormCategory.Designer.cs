@@ -42,7 +42,8 @@ namespace PetShopWinform.Forms
             // 
             // dataGridViewCategory
             // 
-            this.dataGridViewCategory.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            this.dataGridViewCategory.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.dataGridViewCategory.AutoSizeColumnsMode = System.Windows.Forms.DataGridViewAutoSizeColumnsMode.Fill;
             this.dataGridViewCategory.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
@@ -54,6 +55,7 @@ namespace PetShopWinform.Forms
             // 
             // labelTenKho
             // 
+            this.labelTenKho.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelTenKho.AutoSize = true;
             this.labelTenKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenKho.Location = new System.Drawing.Point(86, 38);
@@ -64,6 +66,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxTenKho
             // 
+            this.textBoxTenKho.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxTenKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTenKho.Location = new System.Drawing.Point(162, 35);
             this.textBoxTenKho.Name = "textBoxTenKho";
@@ -72,7 +75,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxMaKho
             // 
-            this.textBoxMaKho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBoxMaKho.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.textBoxMaKho.Enabled = false;
             this.textBoxMaKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMaKho.Location = new System.Drawing.Point(617, 35);
@@ -82,7 +85,7 @@ namespace PetShopWinform.Forms
             // 
             // labelMaKho
             // 
-            this.labelMaKho.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.labelMaKho.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.labelMaKho.AutoSize = true;
             this.labelMaKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaKho.Location = new System.Drawing.Point(546, 38);
@@ -93,7 +96,7 @@ namespace PetShopWinform.Forms
             // 
             // buttonAdd
             // 
-            this.buttonAdd.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.buttonAdd.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonAdd.Location = new System.Drawing.Point(177, 136);
             this.buttonAdd.Name = "buttonAdd";
@@ -105,7 +108,7 @@ namespace PetShopWinform.Forms
             // 
             // buttonEdit
             // 
-            this.buttonEdit.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.buttonEdit.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonEdit.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonEdit.Location = new System.Drawing.Point(389, 136);
             this.buttonEdit.Name = "buttonEdit";
@@ -117,7 +120,7 @@ namespace PetShopWinform.Forms
             // 
             // buttonDelete
             // 
-            this.buttonDelete.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.buttonDelete.Anchor = System.Windows.Forms.AnchorStyles.Top;
             this.buttonDelete.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.buttonDelete.Location = new System.Drawing.Point(600, 136);
             this.buttonDelete.Name = "buttonDelete";
