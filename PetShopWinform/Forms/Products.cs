@@ -95,6 +95,10 @@ namespace PetShopWinform.Forms
                 Clear();
 
             }
+            else
+            {
+                Clear();
+            }
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
