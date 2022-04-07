@@ -13,13 +13,20 @@ namespace PetShopWinform.Forms
 {
     public partial class Admin : Form
     {
+
+        #region Khai báo biến
         private PetshopWinformEntities db = new PetshopWinformEntities();
+        #endregion
+
+        #region Các hàm tạo
         public Admin()
         {
             InitializeComponent();
             loadData();
         }
+        #endregion
 
+        #region Các xử lý
         private void btnAdd_Click(object sender, EventArgs e)
         {
             DialogResult result = MessageBox.Show("Bạn có muốn thêm", "Thông báo", MessageBoxButtons.OKCancel);
@@ -55,13 +62,13 @@ namespace PetShopWinform.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-                if (MessageBox.Show("Are you sure to Delete?", "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
-                {
+            if (MessageBox.Show("Are you sure to Delete?", "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
 
-                    int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells[0].Value);
                 Account ac = db.Accounts.Where(x => x.Id == id).First();
 
-                    IEnumerable<Oder> oder = db.Oders.Where(c => c.Account == ac.Id).ToList();
+                IEnumerable<Oder> oder = db.Oders.Where(c => c.Account == ac.Id).ToList();
 
                 foreach (Oder item in oder)
                 {
@@ -79,18 +86,18 @@ namespace PetShopWinform.Forms
                 loadData();
 
                 MessageBox.Show("Submit Successfully!");
-                }
+            }
 
-         }
-
-        public void loadData()
-        {
-            dataGridView1.DataSource = (from u in db.Accounts select new { id = u.Id, Name = u.DisplayName, password = u.PassWord, role = u.Role }).ToList();
         }
+
+
         private void Admin_Load(object sender, EventArgs e)
         {
             LoadTheme();
         }
+        #endregion
+
+        #region Các phương thức
         private void LoadTheme()
         {
             loadData();
@@ -107,11 +114,11 @@ namespace PetShopWinform.Forms
             label5.ForeColor = ThemeColor.SecondaryColor;
 
         }
-
-        private void btnResetpassword_Click(object sender, EventArgs e)
+        public void loadData()
         {
-
+            dataGridView1.DataSource = (from u in db.Accounts select new { id = u.Id, Name = u.DisplayName, password = u.PassWord, role = u.Role }).ToList();
         }
+        #endregion
     }
 
 }

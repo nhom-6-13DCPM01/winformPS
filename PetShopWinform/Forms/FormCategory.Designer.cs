@@ -60,9 +60,9 @@ namespace PetShopWinform.Forms
             this.labelTenKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelTenKho.Location = new System.Drawing.Point(86, 38);
             this.labelTenKho.Name = "labelTenKho";
-            this.labelTenKho.Size = new System.Drawing.Size(70, 20);
+            this.labelTenKho.Size = new System.Drawing.Size(51, 20);
             this.labelTenKho.TabIndex = 1;
-            this.labelTenKho.Text = "Tên kho:";
+            this.labelTenKho.Text = "Name";
             // 
             // textBoxTenKho
             // 
@@ -90,9 +90,9 @@ namespace PetShopWinform.Forms
             this.labelMaKho.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.labelMaKho.Location = new System.Drawing.Point(546, 38);
             this.labelMaKho.Name = "labelMaKho";
-            this.labelMaKho.Size = new System.Drawing.Size(65, 20);
+            this.labelMaKho.Size = new System.Drawing.Size(23, 20);
             this.labelMaKho.TabIndex = 3;
-            this.labelMaKho.Text = "Mã kho:";
+            this.labelMaKho.Text = "Id";
             // 
             // buttonAdd
             // 

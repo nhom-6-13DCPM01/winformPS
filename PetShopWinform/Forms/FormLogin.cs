@@ -15,12 +15,19 @@ namespace PetShopWinform
 {
     public partial class FormLogin : Form
     {
+
+        #region Khai báo biến
         private PetshopWinformEntities DBPetShop = new PetshopWinformEntities();
+        #endregion
+
+        #region Các hàm tạo
         public FormLogin()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Các xử lý
         private void labelClearAll_Click(object sender, EventArgs e)
         {
             txtUsername.Clear();
@@ -33,8 +40,18 @@ namespace PetShopWinform
             string username = txtUsername.Text;
             string password = txtPassword.Text;
             Login(username, password);
-                
+            txtPassword.Clear();
         }
+        private void txtPassword_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                btnLogin_Click(sender, e);
+            }
+        }
+        #endregion
+
+        #region Các phương thức
         private void Login(String username, string password)
         {
             /*var accCount = DBPetShop.Accounts.Where(a => a.UserName == username && a.PassWord == password).Count();
@@ -51,13 +68,13 @@ namespace PetShopWinform
             }*/
 
             Account acc = DBPetShop.Accounts.SingleOrDefault(a => a.UserName.Equals(username) && a.PassWord == password);
-            if (acc!=null)
+            if (acc != null)
             {
-                
-                    FormMainMenu f = new FormMainMenu(acc);
-                    this.Hide();
-                    f.ShowDialog();
-                    this.Show();
+
+                FormMainMenu f = new FormMainMenu(acc);
+                this.Hide();
+                f.ShowDialog();
+                this.Show();
 
             }
             else
@@ -65,6 +82,10 @@ namespace PetShopWinform
                 MessageBox.Show("The User name or Password you is incrorrect, try again");
             }
         }
+
+
+        #endregion
+
 
     }
 }

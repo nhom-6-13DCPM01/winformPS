@@ -15,15 +15,17 @@ namespace PetShopWinform
 {
     public partial class FormMainMenu : Form
     {
-      
-       
-        //Fields
+
+        #region Khai báo biến
         private Button currentButton;
         private Random random;
         private int tempIndex;
         private Form activeForm;
         private Account account;
         private PetshopWinformEntities DBPetShop = new PetshopWinformEntities();
+        #endregion
+
+        #region Các hàm tạo
         public FormMainMenu(Account account)
         {
             InitializeComponent();
@@ -33,28 +35,9 @@ namespace PetShopWinform
             lbUser.Text = account.UserName;
             PhanQuyen();
         }
+        #endregion
 
-        void PhanQuyen()
-        {
-            if (account.Role == 0)
-            {
-                btnAdmin.Enabled = false;
-                btnProducts.Enabled = false;
-                btnDashboard.Enabled = false;
-                buttonCategory.Enabled = false;
-            }
-        }
-        private Color SelectThemeColor()
-        {
-            int index = random.Next(ThemeColor.ColorList.Count);
-            while (tempIndex == index)
-            {
-                index = random.Next(ThemeColor.ColorList.Count);
-            }
-            tempIndex = index;
-            string color = ThemeColor.ColorList[index];
-            return ColorTranslator.FromHtml(color);
-        }
+        #region Các xử lý
         private void ActivateButton(object btnSender)
         {
             if (btnSender != null)
@@ -75,18 +58,7 @@ namespace PetShopWinform
                 }
             }
         }
-        private void DisableButton()
-        {
-            foreach (Control previousBtn in panelMenu.Controls)
-            {
-                if (previousBtn.GetType() == typeof(Button))
-                {
-                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
-                    previousBtn.ForeColor = Color.Gainsboro;
-                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-                }
-            }
-        }
+
 
         private void OpenChildForm(Form childForm, object btnSender)
         {
@@ -103,26 +75,23 @@ namespace PetShopWinform
             childForm.Show();
             lblTitle.Text = childForm.Text;
         }
-        
+
         private void btnProducts_Click(object sender, EventArgs e)
         {
-           
+
             OpenChildForm(new Forms.Products(), sender);
         }
 
-        
-
         private void btnAdmin_Click(object sender, EventArgs e)
         {
-            
+
             OpenChildForm(new Forms.Admin(), sender);
         }
-
 
         private void btnBilling_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Billing(account), sender);
-            
+
         }
 
         private void btnDashboard_Click(object sender, EventArgs e)
@@ -138,16 +107,6 @@ namespace PetShopWinform
             Reset();
 
         }
-        private void Reset()
-        {
-            DisableButton();
-            lblTitle.Text = "HOME";
-            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
-            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
-            currentButton = null;
-            btnCloseChildForm.Visible = false;
-        }
-
         private void btnCustomers_Click(object sender, EventArgs e)
         {
             OpenChildForm(new Forms.Customers(), sender);
@@ -162,5 +121,51 @@ namespace PetShopWinform
         {
             this.Close();
         }
+        #endregion
+
+        #region Các phương thức
+        void PhanQuyen()
+        {
+            if (account.Role == 0)
+            {
+                btnAdmin.Enabled = false;
+                btnProducts.Enabled = false;
+                btnDashboard.Enabled = false;
+                buttonCategory.Enabled = false;
+            }
+        }
+        private void DisableButton()
+        {
+            foreach (Control previousBtn in panelMenu.Controls)
+            {
+                if (previousBtn.GetType() == typeof(Button))
+                {
+                    previousBtn.BackColor = Color.FromArgb(51, 51, 76);
+                    previousBtn.ForeColor = Color.Gainsboro;
+                    previousBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+                }
+            }
+        }
+        private Color SelectThemeColor()
+        {
+            int index = random.Next(ThemeColor.ColorList.Count);
+            while (tempIndex == index)
+            {
+                index = random.Next(ThemeColor.ColorList.Count);
+            }
+            tempIndex = index;
+            string color = ThemeColor.ColorList[index];
+            return ColorTranslator.FromHtml(color);
+        }
+        private void Reset()
+        {
+            DisableButton();
+            lblTitle.Text = "HOME";
+            panelTitleBar.BackColor = Color.FromArgb(0, 150, 136);
+            panelLogo.BackColor = Color.FromArgb(39, 39, 58);
+            currentButton = null;
+            btnCloseChildForm.Visible = false;
+        }
+        #endregion
     }
 }

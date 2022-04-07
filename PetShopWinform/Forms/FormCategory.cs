@@ -14,26 +14,19 @@ namespace PetShopWinform.Forms
 {
     public partial class FormCategory : Form
     {
+        #region Khai báo biến
         private Category_BUS category_BUS;
+        #endregion
 
+        #region Các hàm tạo
         public FormCategory()
         {
             InitializeComponent();
             category_BUS = new Category_BUS();
         }
+        #endregion
 
-        private void dinhDangKhung()
-        {
-            dataGridViewCategory.Columns[0].Width = (int)(dataGridViewCategory.Width * 0.35);
-            dataGridViewCategory.Columns[1].Width = (int)(dataGridViewCategory.Width * 0.5);
-        }
-
-        private void clearTextBox()
-        {
-            textBoxTenKho.Clear();
-            textBoxMaKho.Clear();
-        }
-
+        #region Các xử lý
         private void buttonAdd_Click(object sender, EventArgs e)
         {
             if (!textBoxTenKho.Text.Equals(""))
@@ -107,8 +100,23 @@ namespace PetShopWinform.Forms
 
         private void FormCategory_SizeChanged(object sender, EventArgs e)
         {
-            if(dataGridViewCategory.RowCount > 0)
+            if (dataGridViewCategory.RowCount > 0)
                 dinhDangKhung();
         }
+        #endregion
+
+        #region Các phương thức
+        private void dinhDangKhung()
+        {
+            dataGridViewCategory.Columns[0].Width = (int)(dataGridViewCategory.Width * 0.35);
+            dataGridViewCategory.Columns[1].Width = (int)(dataGridViewCategory.Width * 0.5);
+        }
+
+        private void clearTextBox()
+        {
+            textBoxTenKho.Clear();
+            textBoxMaKho.Clear();
+        }
+        #endregion
     }
 }

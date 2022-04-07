@@ -14,10 +14,15 @@ namespace PetShopWinform.Forms
 {
     public partial class Billing : Form
     {
+
+        #region Khai báo biến
+
         PetshopWinformEntities db = new PetshopWinformEntities();
         List<ItemOrder> ItemOrders = new List<ItemOrder>();
         Account account;
+        #endregion
 
+        #region Các hàm tạo
         public Billing(Account account)
         {
             InitializeComponent();
@@ -34,7 +39,9 @@ namespace PetShopWinform.Forms
             txtNameAcc.Text = account.DisplayName;
             txtRole.Text = account.Role == 1 ? "Admin" : "Employee";
         }
+        #endregion
 
+        #region Các xử lý
         private void Billing_Load(object sender, EventArgs e)
         {
             LoadTheme();
@@ -42,31 +49,7 @@ namespace PetShopWinform.Forms
             LoadProduct();
         }
 
-        private void LoadTheme()
-        {
-            foreach (Control btns in this.Controls)
-            {
-                if (btns.GetType() == typeof(Button))
-                {
-                    Button btn = (Button)btns;
-                    btn.BackColor = ThemeColor.PrimaryColor;
-                    btn.ForeColor = Color.White;
-                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
-                }
-            }
-            label21.ForeColor = ThemeColor.SecondaryColor;
 
-        }
-
-        public void LoadData()
-        {
-            cbCustom.DataSource = db.Customers.ToList();
-            cbCustom.DisplayMember = "Id";
-            cbCustom.ValueMember = "Id";
-            cbCate.DataSource = db.Categories.ToList();
-            cbCate.DisplayMember = "Name";
-            cbCate.ValueMember = "Id";
-        }
 
         private void cbCustom_TextChanged(object sender, EventArgs e)
         {
@@ -104,14 +87,7 @@ namespace PetShopWinform.Forms
         {
             LoadProduct();
         }
-        public void LoadProduct()
-        {
-            tabPage1.Text = cbCate.Text;
-            int idCate;
-            Int32.TryParse(cbCate.SelectedValue.ToString(), out idCate);
-            IEnumerable<Product> products = db.Products.Where(c => c.Category == idCate).ToList();
-            addProductTab(products);
-        }
+
         public void addProductTab(IEnumerable<Product> list)
         {
             tabPage1.Controls.Clear();
@@ -151,28 +127,7 @@ namespace PetShopWinform.Forms
             txtPrice.Text = itemPro.Price.ToString();
             lbtal.Text = (Convert.ToDecimal(txtPrice.Text) * Convert.ToInt32(PriceUp.Value)).ToString("#,##") + " ₫";
         }
-        private void showData()
-        {
-            var binding = new BindingSource();
-            binding.DataSource = ItemOrders;
-            dgvCurrentOrder.DataSource = binding;
-            sumToTal();
-        }
-        private void sumToTal()
-        {
-            if (ItemOrders != null)
-            {
-                if (lbDiscount.Text.Equals("20%"))
-                {
-                    decimal total = ItemOrders.Sum(c => c.Total) - (ItemOrders.Sum(c => c.Total) * 20 / 100);
-                    lbtotal1.Text = total.ToString("#,##") + " ₫";
-                    return;
-                }
-                lbtotal1.Text = ItemOrders.Sum(c => c.Total).ToString("#,##") + " ₫";
-                return;
-            }
-            lbtotal1.Text = "0.0";
-        }
+
         private void pictureBox1_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Convert.ToString(txtSearch.Text)))
@@ -245,15 +200,6 @@ namespace PetShopWinform.Forms
             ItemOrders.Clear();
             ClearData();
             showData();
-        }
-
-        private void ClearData()
-        {
-            txtIdPro.Text = "";
-            txtPro.Text = "";
-            txtPrice.Text = "";
-            PriceUp.Value = 1;
-            lbtal.Text = "Total";
         }
 
         private void btnD_Click(object sender, EventArgs e)
@@ -341,6 +287,73 @@ namespace PetShopWinform.Forms
             }
 
         }
+        #endregion
+
+        #region Các phương thức
+        private void ClearData()
+        {
+            txtIdPro.Text = "";
+            txtPro.Text = "";
+            txtPrice.Text = "";
+            PriceUp.Value = 1;
+            lbtal.Text = "Total";
+        }
+        private void showData()
+        {
+            var binding = new BindingSource();
+            binding.DataSource = ItemOrders;
+            dgvCurrentOrder.DataSource = binding;
+            sumToTal();
+        }
+        private void sumToTal()
+        {
+            if (ItemOrders != null)
+            {
+                if (lbDiscount.Text.Equals("20%"))
+                {
+                    decimal total = ItemOrders.Sum(c => c.Total) - (ItemOrders.Sum(c => c.Total) * 20 / 100);
+                    lbtotal1.Text = total.ToString("#,##") + " ₫";
+                    return;
+                }
+                lbtotal1.Text = ItemOrders.Sum(c => c.Total).ToString("#,##") + " ₫";
+                return;
+            }
+            lbtotal1.Text = "0.0";
+        }
+        private void LoadTheme()
+        {
+            foreach (Control btns in this.Controls)
+            {
+                if (btns.GetType() == typeof(Button))
+                {
+                    Button btn = (Button)btns;
+                    btn.BackColor = ThemeColor.PrimaryColor;
+                    btn.ForeColor = Color.White;
+                    btn.FlatAppearance.BorderColor = ThemeColor.SecondaryColor;
+                }
+            }
+            label21.ForeColor = ThemeColor.SecondaryColor;
+
+        }
+
+        public void LoadData()
+        {
+            cbCustom.DataSource = db.Customers.ToList();
+            cbCustom.DisplayMember = "Id";
+            cbCustom.ValueMember = "Id";
+            cbCate.DataSource = db.Categories.ToList();
+            cbCate.DisplayMember = "Name";
+            cbCate.ValueMember = "Id";
+        }
+        public void LoadProduct()
+        {
+            tabPage1.Text = cbCate.Text;
+            int idCate;
+            Int32.TryParse(cbCate.SelectedValue.ToString(), out idCate);
+            IEnumerable<Product> products = db.Products.Where(c => c.Category == idCate).ToList();
+            addProductTab(products);
+        }
+        #endregion
 
     }
 }

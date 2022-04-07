@@ -18,13 +18,18 @@ namespace PetShopWinform.Forms
 {
     public partial class Statistical : Form
     {
-        Statistical_BUS busThongKe;
 
+        #region Khai báo biến
+        Statistical_BUS busThongKe;
+        #endregion
+
+        #region Các hàm tạo
         public Statistical()
         {
             InitializeComponent();
             busThongKe = new Statistical_BUS();
         }
+        #endregion
 
         #region Truyền và xử li dữ liệu
         private void LoadTheme()
@@ -52,7 +57,7 @@ namespace PetShopWinform.Forms
         private void doanhThuTongCong()
         {
             double tongCong = 0;
-            for(int i = 0; i < dataGridViewBangHienThi.RowCount; i++)
+            for (int i = 0; i < dataGridViewBangHienThi.RowCount; i++)
             {
                 tongCong += Convert.ToDouble(dataGridViewBangHienThi.Rows[i].Cells[3].Value);
             }
@@ -65,8 +70,8 @@ namespace PetShopWinform.Forms
             Workbook workbook = app.Workbooks.Add(Type.Missing);
             Worksheet worksheet = null;
             //Định vị sheet
-            worksheet = (Worksheet) workbook.Sheets["Sheet1"];
-            worksheet = (Worksheet) workbook.ActiveSheet;
+            worksheet = (Worksheet)workbook.Sheets["Sheet1"];
+            worksheet = (Worksheet)workbook.ActiveSheet;
             //Định dạng sheet
             dinhDangWorksheet(worksheet);
             //cái i = 1 là vị trí cell 1 bên excel
@@ -146,7 +151,8 @@ namespace PetShopWinform.Forms
                     e.CellStyle.BackColor = Color.Green;
                     e.CellStyle.ForeColor = Color.White;
                 }
-            }else if (e.ColumnIndex.Equals(1))
+            }
+            else if (e.ColumnIndex.Equals(1))
             {
                 e.CellStyle.Format = "dd/MM/yyyy";
             }
@@ -188,7 +194,7 @@ namespace PetShopWinform.Forms
         private void dateTimePickerTo_ValueChanged(object sender, EventArgs e)
         {
             DateTime giaTriNgay = DateTime.Today;
-            if(dateTimePickerTo.Value < dateTimePickerFrom.Value)
+            if (dateTimePickerTo.Value < dateTimePickerFrom.Value)
             {
                 MessageBox.Show("Không tìm thấy dữ liệu phù hợp", "Thông báo", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 dateTimePickerTo.Value = giaTriNgay;
@@ -279,7 +285,7 @@ namespace PetShopWinform.Forms
             if (maKhachHang.Equals(null))
             {
                 info = new Statistcal_Info(maHoaDon, ngayTao);
-                info.Show(); 
+                info.Show();
             }
             else
             {
@@ -290,9 +296,9 @@ namespace PetShopWinform.Forms
 
         private void btnExcel_Click(object sender, EventArgs e)
         {
-            using(SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter="Excel Workbook|*.xlsx" })
+            using (SaveFileDialog saveFileDialog = new SaveFileDialog() { Filter = "Excel Workbook|*.xlsx" })
             {
-                if(saveFileDialog.ShowDialog() == DialogResult.OK)
+                if (saveFileDialog.ShowDialog() == DialogResult.OK)
                 {
                     exportToExcel(dataGridViewBangHienThi, saveFileDialog.FileName);
                 }

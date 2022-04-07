@@ -13,40 +13,24 @@ namespace PetShopWinform.Forms
 {
     public partial class Customers : Form
     {
-        PetshopWinformEntities db = new PetshopWinformEntities();
 
+        #region Khai báo biến
+        PetshopWinformEntities db = new PetshopWinformEntities();
+        #endregion
+
+        #region Các hàm tạo
         public Customers()
         {
             InitializeComponent();
         }
+        #endregion
 
+        #region Các xử lý
         private void Customers_Load(object sender, EventArgs e)
         {
             LoadData();
         }
 
-        public void LoadData()
-        {
-            dgvCustomerList.DataSource = (from c in db.Customers select new { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone, Vip = c.Vip == true ? "Có" : "Không" }).ToList();
-            cbVip.DataSource = Vip.getVips().ToList();
-            cbVip.DisplayMember = "vip";
-            cbVip.ValueMember = "value";
-        }
-
-        void Clear()
-        {
-            txtId.Text = txtName.Text = txtAddress.Text = txtPhone.Text = "";
-            cbVip.SelectedIndex = 1;
-        }
-
-        public bool xacNhan(string Message)
-        {
-            if (MessageBox.Show(Message, "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
-            {
-                return true;
-            }
-            return false;
-        }
         private void btnAdd_Click(object sender, EventArgs e)
         {
             if (CheckInput())
@@ -65,36 +49,6 @@ namespace PetShopWinform.Forms
                 Clear();
                 LoadData();
             }
-        }
-
-
-
-        bool CheckInput()
-        {
-            long result;
-            String phone = txtPhone.Text;
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Enter Name, please", "Notification");
-                txtName.Focus();
-                return false;
-            }
-
-            if (txtAddress.Text == "")
-            {
-                MessageBox.Show("Enter Address, please", "Notification");
-                txtAddress.Focus();
-                return false;
-            }
-
-            //SL ko được nhập chữ
-            if (!(long.TryParse(phone, out result)))
-            {
-                MessageBox.Show("Please enter the Phone in correct format", "Notification");
-                txtPhone.Focus();
-                return false;
-            }
-            return true;
         }
 
         private void dgvCustomerList_CellClick(object sender, DataGridViewCellEventArgs e)
@@ -169,7 +123,10 @@ namespace PetShopWinform.Forms
             Clear();
             LoadData();
         }
-
+        private void btnReLoad_Click(object sender, EventArgs e)
+        {
+            LoadData();
+        }
         private void btnSearch_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(txtSearch.Text))
@@ -203,10 +160,57 @@ namespace PetShopWinform.Forms
                                               Vip = c.Vip == true ? "Có" : "Không"
                                           }).ToList();
         }
+        #endregion
 
-        private void btnReLoad_Click(object sender, EventArgs e)
+        #region Các phương thức
+        public void LoadData()
         {
-            LoadData();
+            dgvCustomerList.DataSource = (from c in db.Customers select new { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone, Vip = c.Vip == true ? "Có" : "Không" }).ToList();
+            cbVip.DataSource = Vip.getVips().ToList();
+            cbVip.DisplayMember = "vip";
+            cbVip.ValueMember = "value";
         }
+
+        void Clear()
+        {
+            txtId.Text = txtName.Text = txtAddress.Text = txtPhone.Text = "";
+            cbVip.SelectedIndex = 1;
+        }
+        bool CheckInput()
+        {
+            long result;
+            String phone = txtPhone.Text;
+            if (txtName.Text == "")
+            {
+                MessageBox.Show("Enter Name, please", "Notification");
+                txtName.Focus();
+                return false;
+            }
+
+            if (txtAddress.Text == "")
+            {
+                MessageBox.Show("Enter Address, please", "Notification");
+                txtAddress.Focus();
+                return false;
+            }
+
+            //SL ko được nhập chữ
+            if (!(long.TryParse(phone, out result)))
+            {
+                MessageBox.Show("Please enter the Phone in correct format", "Notification");
+                txtPhone.Focus();
+                return false;
+            }
+            return true;
+        }
+        public bool xacNhan(string Message)
+        {
+            if (MessageBox.Show(Message, "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            {
+                return true;
+            }
+            return false;
+        }
+        #endregion
     }
 }

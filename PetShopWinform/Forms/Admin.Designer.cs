@@ -221,7 +221,7 @@ namespace PetShopWinform.Forms
             this.btnResetpassword.TabIndex = 16;
             this.btnResetpassword.Text = "Reset ";
             this.btnResetpassword.UseVisualStyleBackColor = true;
-            this.btnResetpassword.Click += new System.EventHandler(this.btnResetpassword_Click);
+            
             // 
             // dataGridView1
             // 

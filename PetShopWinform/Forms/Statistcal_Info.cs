@@ -15,12 +15,15 @@ namespace PetShopWinform.Forms
 {
     public partial class Statistcal_Info : Form
     {
+        #region Khai báo biến
         private PetshopWinformEntities DBPetShop;
         private Statistical_BUS busThongKe;
         private int maHoaDon;
         private DateTime ngayTao;
         private int maKhachHang = 0;
+        #endregion
 
+        #region Các hàm tạo
         public Statistcal_Info()
         {
             InitializeComponent();
@@ -46,7 +49,30 @@ namespace PetShopWinform.Forms
             this.maKhachHang = maKhachHang;
             this.ngayTao = ngayTao;
         }
-        
+        #endregion
+
+        #region Các xử lý
+        private void buttonCancel_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+
+        private void Statistcal_Info_Load(object sender, EventArgs e)
+        {
+            load_data();
+            dinhDangBang();
+        }
+
+        private void dataGridViewDanhMucSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
+        {
+            if (e.ColumnIndex.Equals(3))
+            {
+                e.Value = String.Format(CultureInfo.CreateSpecificCulture("vi-vn"), "{0:c}", dataGridViewDanhMucSanPham.Rows[e.RowIndex].Cells[3].Value);
+            }
+        }
+        #endregion
+
+        #region Các phương thức
         private void load_data()
         {
             busThongKe.truyenThongTinKhachHangTheoMaKhachHang(textBoxMaKhachHang, textBoxTenKhachHang, textBoxDiaChi, textBoxDienThoai, checkBoxGiamGia, maKhachHang);
@@ -87,24 +113,7 @@ namespace PetShopWinform.Forms
             dinhDangDoRongCot();
             dinhDanhHeaderText();
         }
+        #endregion
 
-        private void buttonCancel_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
-
-        private void Statistcal_Info_Load(object sender, EventArgs e)
-        {
-            load_data();
-            dinhDangBang();
-        }
-
-        private void dataGridViewDanhMucSanPham_CellFormatting(object sender, DataGridViewCellFormattingEventArgs e)
-        {
-            if (e.ColumnIndex.Equals(3))
-            {
-                e.Value = String.Format(CultureInfo.CreateSpecificCulture("vi-vn"), "{0:c}", dataGridViewDanhMucSanPham.Rows[e.RowIndex].Cells[3].Value);
-            }
-        }
     }
 }
