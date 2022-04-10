@@ -57,7 +57,7 @@ namespace PetShopWinform.Forms
         private void btnDelete_Click(object sender, EventArgs e)
         {
 
-            if (MessageBox.Show("Are you sure to Delete? this product with name \n "+txtName.Text, "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
+            if (MessageBox.Show("Are you sure to Delete? \n This product with name: " + txtName.Text + "\nand with related stuff", "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
 
                 int id = Convert.ToInt32(dgvProductList.CurrentRow.Cells[0].Value);
@@ -95,38 +95,42 @@ namespace PetShopWinform.Forms
                 Clear();
 
             }
-            else
-            {
-                Clear();
-            }
         }
 
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            Clear();
 
         }
 
         private void dgvProductList_DoubleClick(object sender, EventArgs e)
         {
-            if (dgvProductList.CurrentRow.Index != -1)
+            try
             {
-                var id = Convert.ToInt32(dgvProductList.CurrentRow.Cells[0].Value);
-                Product pr = db.Products.Where(x => x.Id == id).FirstOrDefault();
-                txtId.Text = pr.Id.ToString();
-                txtName.Text = pr.Name;
-                cbCategory.SelectedValue = pr.Category;
-                txtQuantity.Text = pr.Quantity.ToString();
-                txtPrice.Text = pr.Price.ToString();
+                if (dgvProductList.CurrentRow.Index != -1)
+                {
+                    var id = Convert.ToInt32(dgvProductList.CurrentRow.Cells[0].Value);
+                    Product pr = db.Products.Where(x => x.Id == id).FirstOrDefault();
+                    txtId.Text = pr.Id.ToString();
+                    txtName.Text = pr.Name;
+                    cbCategory.SelectedValue = pr.Category;
+                    txtQuantity.Text = pr.Quantity.ToString();
+                    txtPrice.Text = pr.Price.ToString();
 
-                btnEdit.Enabled = true;
-                btnDelete.Enabled = true;
+                    btnEdit.Enabled = true;
+                    btnDelete.Enabled = true;
+                }
             }
+            catch(Exception )
+            {
+
+            }
+
         }
 
         private void txtSearch_KeyPress(object sender, KeyPressEventArgs e)
         {
-            /*var results = db.Products.Where(p => p.Name.Contains(txtSearch.Text));*/
             var results = (from c in db.Products where c.Name.Contains(txtSearch.Text) select new { Id = c.Id, Name = c.Name, Category = c.Category1.Name, Quantity = c.Quantity, Price = c.Price });
             dgvProductList.DataSource = results.ToList();
         }
@@ -148,64 +152,10 @@ namespace PetShopWinform.Forms
             label5.ForeColor = ThemeColor.SecondaryColor;
             label6.ForeColor = ThemeColor.PrimaryColor;
         }
-        bool CheckInput()
-        {
-            long result;
-            String quantity = txtQuantity.Text;
-            String price = txtPrice.Text;
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Enter Name, please", "Notification");
-                txtName.Focus();
-                return false;
-            }
-
-            if (txtQuantity.Text == "")
-            {
-                MessageBox.Show("Enter Quantity, please", "Notification");
-                txtQuantity.Focus();
-                return false;
-            }
-
-            if (txtPrice.Text == "")
-            {
-                MessageBox.Show("Enter Price, please", "Notification");
-                txtPrice.Focus();
-                return false;
-            }
-            //SL ko được nhập chữ
-            if (!(long.TryParse(quantity, out result)))
-            {
-                MessageBox.Show("Please enter the Quantity in correct format", "Notification");
-                txtQuantity.Focus();
-                return false;
-            }
-            //Số lượng ko được âm
-            if (result < 0)
-            {
-                MessageBox.Show("Quantity cannot be negative value", "Notification");
-                txtQuantity.Focus();
-                return false;
-            }
-            //Giá tiền ko đc nhập chữ
-            if (!(long.TryParse(price, out result)))
-            {
-                MessageBox.Show("Please enter the Price in correct format", "Notification");
-                txtPrice.Focus();
-                return false;
-            }
-
-            if (result < 0)
-            {
-                MessageBox.Show("Price cannot be negative value", "Notification");
-                txtPrice.Focus();
-                return false;
-            }
-            return true;
-        }
         private void LoadData()
         {
             var result = from c in db.Products select new { Id = c.Id, Name = c.Name, Category = c.Category1.Name, Quantity = c.Quantity, Price = c.Price };
+            txtSearch.Text = "";
             dgvProductList.DataSource = result.ToList();
             cbCategory.DataSource = db.Categories.ToList();
             cbCategory.DisplayMember = "Name";

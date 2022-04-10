@@ -85,6 +85,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxDiaChi
             // 
+            this.textBoxDiaChi.Enabled = false;
             this.textBoxDiaChi.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxDiaChi.Location = new System.Drawing.Point(55, 71);
             this.textBoxDiaChi.Name = "textBoxDiaChi";
@@ -94,6 +95,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxTenKhachHang
             // 
+            this.textBoxTenKhachHang.Enabled = false;
             this.textBoxTenKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxTenKhachHang.Location = new System.Drawing.Point(302, 29);
             this.textBoxTenKhachHang.Name = "textBoxTenKhachHang";
@@ -103,6 +105,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxMaKhachHang
             // 
+            this.textBoxMaKhachHang.Enabled = false;
             this.textBoxMaKhachHang.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMaKhachHang.Location = new System.Drawing.Point(97, 28);
             this.textBoxMaKhachHang.Name = "textBoxMaKhachHang";
@@ -114,6 +117,7 @@ namespace PetShopWinform.Forms
             // 
             this.checkBoxGiamGia.AutoCheck = false;
             this.checkBoxGiamGia.AutoSize = true;
+            this.checkBoxGiamGia.Enabled = false;
             this.checkBoxGiamGia.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.checkBoxGiamGia.Location = new System.Drawing.Point(452, 29);
             this.checkBoxGiamGia.Name = "checkBoxGiamGia";
@@ -193,6 +197,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxTongTien
             // 
+            this.textBoxTongTien.Enabled = false;
             this.textBoxTongTien.Location = new System.Drawing.Point(336, 330);
             this.textBoxTongTien.Name = "textBoxTongTien";
             this.textBoxTongTien.Size = new System.Drawing.Size(123, 20);
@@ -201,7 +206,7 @@ namespace PetShopWinform.Forms
             // dataGridViewDanhMucSanPham
             // 
             this.dataGridViewDanhMucSanPham.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridViewDanhMucSanPham.Location = new System.Drawing.Point(42, 129);
+            this.dataGridViewDanhMucSanPham.Location = new System.Drawing.Point(42, 121);
             this.dataGridViewDanhMucSanPham.Name = "dataGridViewDanhMucSanPham";
             this.dataGridViewDanhMucSanPham.Size = new System.Drawing.Size(467, 177);
             this.dataGridViewDanhMucSanPham.TabIndex = 14;
@@ -209,6 +214,7 @@ namespace PetShopWinform.Forms
             // 
             // textBoxMaHoaDon
             // 
+            this.textBoxMaHoaDon.Enabled = false;
             this.textBoxMaHoaDon.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBoxMaHoaDon.Location = new System.Drawing.Point(80, 28);
             this.textBoxMaHoaDon.Name = "textBoxMaHoaDon";
@@ -219,6 +225,7 @@ namespace PetShopWinform.Forms
             // dateTimePickerNgayTao
             // 
             this.dateTimePickerNgayTao.CustomFormat = "dd/MM/yyyy";
+            this.dateTimePickerNgayTao.Enabled = false;
             this.dateTimePickerNgayTao.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.5F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.dateTimePickerNgayTao.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dateTimePickerNgayTao.Location = new System.Drawing.Point(306, 29);

@@ -22,6 +22,7 @@ namespace PetShopWinform.Forms
         public Customers()
         {
             InitializeComponent();
+           
         }
         #endregion
 
@@ -30,27 +31,12 @@ namespace PetShopWinform.Forms
         {
             LoadData();
         }
-
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            if (CheckInput())
-            {
-                if (xacNhan("Bạn có muốn thêm") == false)
-                {
-                    return;
-                }
-                Customer customer = new Customer();
-                customer.Name = txtName.Text;
-                customer.Address = txtAddress.Text;
-                customer.Phone = txtPhone.Text;
-                customer.Vip = Convert.ToBoolean(cbVip.SelectedValue);
-                db.Customers.Add(customer);
-                db.SaveChanges();
-                Clear();
-                LoadData();
-            }
+            AddCustomer addCustomer = new AddCustomer();
+            addCustomer.ShowDialog();
+            LoadData();
         }
-
         private void dgvCustomerList_CellClick(object sender, DataGridViewCellEventArgs e)
         {
             try
@@ -62,6 +48,8 @@ namespace PetShopWinform.Forms
                 txtAddress.Text = customer.Address;
                 txtPhone.Text = customer.Phone;
                 cbVip.SelectedValue = customer.Vip;
+                btnEdit.Enabled = true;
+                btnDelete.Enabled = true;
             }
             catch (Exception)
             {
@@ -69,38 +57,23 @@ namespace PetShopWinform.Forms
             }
 
         }
-
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            if (string.IsNullOrEmpty(Convert.ToString(txtId.Text)))
+            if (MessageBox.Show("Bạn có muốn chỉnh sửa ?", "EF CRUP Operation", MessageBoxButtons.YesNo) == DialogResult.Yes)
             {
-                return;
-            }
-            if (CheckInput())
-            {
-                if (xacNhan("Bạn có muốn Chỉnh sửa khách hàng có Id: " + txtId.Text) == false)
-                {
-                    return;
-                }
-                int id = Convert.ToInt32(txtId.Text);
-                Customer customer = db.Customers.SingleOrDefault(c => c.Id == id);
-                customer.Name = txtName.Text;
-                customer.Address = txtAddress.Text;
-                customer.Phone = txtPhone.Text;
-                customer.Vip = Convert.ToBoolean(cbVip.SelectedValue);
-                db.SaveChanges();
-                Clear();
+                EditCustomer editCustomer = new EditCustomer(Convert.ToInt32(txtId.Text));
+                editCustomer.ShowDialog();
                 LoadData();
+                Clear();
             }
         }
-
         private void btnDelete_Click(object sender, EventArgs e)
         {
             if (string.IsNullOrEmpty(Convert.ToString(txtId.Text)))
             {
                 return;
             }
-            if (xacNhan("Bạn có muốn Xóa khách hàng có Id: " + txtId.Text) == false)
+            if (xacNhan("Bạn có muốn Xóa khách hàng có Id: " + txtId.Text +"\n tên :"+txtName.Text+"\n cùng với những thứ liên quan ?") == false)
             {
                 return;
             }
@@ -126,6 +99,7 @@ namespace PetShopWinform.Forms
         private void btnReLoad_Click(object sender, EventArgs e)
         {
             LoadData();
+            Clear();
         }
         private void btnSearch_Click(object sender, EventArgs e)
         {
@@ -175,33 +149,8 @@ namespace PetShopWinform.Forms
         {
             txtId.Text = txtName.Text = txtAddress.Text = txtPhone.Text = "";
             cbVip.SelectedIndex = 1;
-        }
-        bool CheckInput()
-        {
-            long result;
-            String phone = txtPhone.Text;
-            if (txtName.Text == "")
-            {
-                MessageBox.Show("Enter Name, please", "Notification");
-                txtName.Focus();
-                return false;
-            }
-
-            if (txtAddress.Text == "")
-            {
-                MessageBox.Show("Enter Address, please", "Notification");
-                txtAddress.Focus();
-                return false;
-            }
-
-            //SL ko được nhập chữ
-            if (!(long.TryParse(phone, out result)))
-            {
-                MessageBox.Show("Please enter the Phone in correct format", "Notification");
-                txtPhone.Focus();
-                return false;
-            }
-            return true;
+            btnEdit.Enabled = false;
+            btnDelete.Enabled = false;
         }
         public bool xacNhan(string Message)
         {

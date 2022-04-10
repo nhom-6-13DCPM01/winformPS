@@ -48,9 +48,6 @@ namespace PetShopWinform.Forms
             LoadData();
             LoadProduct();
         }
-
-
-
         private void cbCustom_TextChanged(object sender, EventArgs e)
         {
             int id;

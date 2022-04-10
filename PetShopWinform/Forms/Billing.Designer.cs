@@ -708,11 +708,11 @@ namespace PetShopWinform.Forms
             this.txtPro.Enabled = false;
             this.txtPro.Font = new System.Drawing.Font("Mongolian Baiti", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtPro.ForeColor = System.Drawing.Color.Red;
-            this.txtPro.Location = new System.Drawing.Point(24, 69);
+            this.txtPro.Location = new System.Drawing.Point(24, 55);
             this.txtPro.Multiline = true;
             this.txtPro.Name = "txtPro";
             this.txtPro.ReadOnly = true;
-            this.txtPro.Size = new System.Drawing.Size(106, 26);
+            this.txtPro.Size = new System.Drawing.Size(106, 40);
             this.txtPro.TabIndex = 18;
             // 
             // btnAcept
@@ -773,7 +773,7 @@ namespace PetShopWinform.Forms
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label10.ForeColor = System.Drawing.Color.Black;
-            this.label10.Location = new System.Drawing.Point(19, 51);
+            this.label10.Location = new System.Drawing.Point(23, 36);
             this.label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(60, 16);

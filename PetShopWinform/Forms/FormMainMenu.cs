@@ -32,7 +32,7 @@ namespace PetShopWinform
             random = new Random();
             btnCloseChildForm.Visible = false;
             this.account = account;
-            lbUser.Text = account.UserName;
+            lbUser.Text = account.DisplayName;
             PhanQuyen();
         }
         #endregion

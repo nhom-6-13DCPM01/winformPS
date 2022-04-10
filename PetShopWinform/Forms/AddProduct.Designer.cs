@@ -88,9 +88,9 @@
             this.label1.Location = new System.Drawing.Point(32, 30);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(51, 20);
+            this.label1.Size = new System.Drawing.Size(110, 20);
             this.label1.TabIndex = 11;
-            this.label1.Text = "Name";
+            this.label1.Text = "Product Name";
             // 
             // cbCategory
             // 
@@ -123,7 +123,7 @@
             this.txtName.Margin = new System.Windows.Forms.Padding(2);
             this.txtName.Multiline = true;
             this.txtName.Name = "txtName";
-            this.txtName.Size = new System.Drawing.Size(134, 32);
+            this.txtName.Size = new System.Drawing.Size(293, 32);
             this.txtName.TabIndex = 4;
             // 
             // txtQuantity
