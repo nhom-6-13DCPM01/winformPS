@@ -30,6 +30,9 @@ namespace PetShopWinform.Forms
         private void Customers_Load(object sender, EventArgs e)
         {
             LoadData();
+            cbVip.DataSource = Vip.getVips().ToList();
+            cbVip.DisplayMember = "vip";
+            cbVip.ValueMember = "value";
         }
         private void btnAdd_Click(object sender, EventArgs e)
         {
@@ -42,7 +45,7 @@ namespace PetShopWinform.Forms
             try
             {
                 int id = Convert.ToInt32(dgvCustomerList.Rows[e.RowIndex].Cells[0].Value);
-                Customer customer = db.Customers.SingleOrDefault(c => c.Id == id);
+                Customer customer = db.Customers.First(c => c.Id == id);
                 txtId.Text = Convert.ToString(customer.Id);
                 txtName.Text = customer.Name;
                 txtAddress.Text = customer.Address;
@@ -65,6 +68,7 @@ namespace PetShopWinform.Forms
                 editCustomer.ShowDialog();
                 LoadData();
                 Clear();
+                db = new PetshopWinformEntities();
             }
         }
         private void btnDelete_Click(object sender, EventArgs e)
@@ -140,15 +144,12 @@ namespace PetShopWinform.Forms
         public void LoadData()
         {
             dgvCustomerList.DataSource = (from c in db.Customers select new { Id = c.Id, Name = c.Name, Address = c.Address, Phone = c.Phone, Vip = c.Vip == true ? "Có" : "Không" }).ToList();
-            cbVip.DataSource = Vip.getVips().ToList();
-            cbVip.DisplayMember = "vip";
-            cbVip.ValueMember = "value";
         }
 
         void Clear()
         {
             txtId.Text = txtName.Text = txtAddress.Text = txtPhone.Text = "";
-            cbVip.SelectedIndex = 1;
+            cbVip.SelectedIndex = 0;
             btnEdit.Enabled = false;
             btnDelete.Enabled = false;
         }

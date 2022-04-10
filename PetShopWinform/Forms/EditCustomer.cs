@@ -23,14 +23,16 @@ namespace PetShopWinform.Forms
         {
             InitializeComponent();
             this.customer = db.Customers.SingleOrDefault(c=> c.Id == idCustomer );
+            cbVip.DataSource = Vip.getVips().ToList();
+            cbVip.DisplayMember = "vip";
+            cbVip.ValueMember = "value";
             txtId.Text = Convert.ToString(customer.Id);
             txtName.Text = customer.Name;
             txtAddress.Text = customer.Address;
             txtPhone.Text = customer.Phone;
             cbVip.SelectedValue = customer.Vip;
-            cbVip.DataSource = Vip.getVips().ToList();
-            cbVip.DisplayMember = "vip";
-            cbVip.ValueMember = "value";
+            
+            
         }
         #endregion
 

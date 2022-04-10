@@ -4,8 +4,10 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Data.Entity;
+using System.Data.Linq;
 using System.Drawing;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -16,7 +18,6 @@ namespace PetShopWinform.Forms
     {
 
         #region Khai báo biến
-        Product pr = new Product();
         PetshopWinformEntities db = new PetshopWinformEntities();
         #endregion
 
@@ -50,6 +51,7 @@ namespace PetShopWinform.Forms
                 editProduct.ShowDialog();
                 Clear();
                 LoadData();
+                db = new PetshopWinformEntities();
             }
 
         }
@@ -166,7 +168,6 @@ namespace PetShopWinform.Forms
             txtId.Text = txtName.Text = txtQuantity.Text = txtPrice.Text = "";
             btnDelete.Enabled = false;
             btnEdit.Enabled = false;
-            pr.Id = 0;
         }
         #endregion
 
